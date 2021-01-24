@@ -1,7 +1,7 @@
 import React from "react"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Link, useStaticQuery } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 
 export default function BlogBlock() {
 
