@@ -37,10 +37,4 @@ jobs:
 
     - run: npm ci
     - run: npm run build
-
-    - name: Cypress tests run
-      uses: cypress-io/github-action@v1
-      with: 
-        build: npm run build
-        start: npm start
-        wait-on: http://localhost:8000
+    - run: npm run test:e2e
