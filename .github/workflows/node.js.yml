@@ -25,5 +25,13 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Create .env file
+      uses: SpicyPizza/create-envfile@v1
+      with: 
+        envkey_CLOUDINARY_CLOUD_NAME: "sania-dsouza"
+        envkey_API_KEY: 168394517986144
+        envkey_API_SECRET: "0IfvcdwmD_uuMWGVy-t6oHo0aK0"
+        envkey_GITHUB_LOGIN: "sania-dsouza"
+        envkey_GITHUB_PERSONAL_ACCESS_TOKEN: ${{ secrets.SECRET_KEY }}
     - run: npm ci
     - run: npm run build
