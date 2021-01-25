@@ -49,7 +49,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "./node_modules/.bin/cypress run"
+    "test": "./node_modules/.bin/cypress run",
+    "start_server_and_test" : "npm run develop && ./node_modules/.bin/cypress run"
   },
   "repository": {
     "type": "git",
