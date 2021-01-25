@@ -2,6 +2,8 @@
   My portfolio site README.md
 </h1>
 
+[![master Actions Status](https://github.com/sania-dsouza/portfolio-site/workflows/Node.js%20CI/badge.svg)](https://github.com/sania-dsouza/portfolio-site/actions)
+
 ## To build the site locally ##
 
 1. **Clone the repo into desired folder on your machine**
