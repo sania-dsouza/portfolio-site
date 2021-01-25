@@ -36,7 +36,8 @@
   },
   "devDependencies": {
     "cypress": "^6.2.1",
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "start-server-and-test": "^1.11.7"
   },
   "keywords": [
     "gatsby"
@@ -50,7 +51,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "./node_modules/.bin/cypress run",
-    "start_server_and_test" : "npm run develop && ./node_modules/.bin/cypress run"
+    "test:e2e": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test develop http://localhost:8000 test"
   },
   "repository": {
     "type": "git",

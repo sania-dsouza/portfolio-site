@@ -61,6 +61,9 @@ public
 # Mac files
 .DS_Store
 
+# Cypress videos
+cypress/videos
+
 # Yarn
 yarn-error.log
 .pnp/
