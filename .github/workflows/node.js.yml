@@ -35,4 +35,4 @@ jobs:
         envkey_GITHUB_PERSONAL_ACCESS_TOKEN: ${{ secrets.SECRET_KEY }}
     - run: npm ci
     - run: npm run build
-    - run: npm run tests
+    - run: npm run test
