@@ -624,20 +624,18 @@ div.homeImage {
 }
 
 .projBlockWrapper {
-  width: 100%;
-  height: 100%;
   display: grid;
+  overflow: hidden;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 13vw;
   row-gap: 2em;
 }
 
 .blockWrapper {
-  margin: auto 5rem ;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 21vw;
-  gap: 1em;
+  row-gap: 5em;
 }
 
 .site {
@@ -758,7 +756,7 @@ div.homeImage {
   For viewports other than laptops */
 
 /* tablets */
-@media (min-width: 750px) and (max-width: 1115px) {   
+@media (min-width: 750px) and (max-width: 1115px) and (orientation: landscape) {   
 
   .projBlockWrapper {
     width: 98%;
@@ -768,11 +766,28 @@ div.homeImage {
   }
 
   .blockWrapper {
-    width: 50%;
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 40vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 41vw;
     row-gap: 8em;
   }
+
+}
+
+@media (min-width: 750px) and (max-width: 1115px) and (orientation: portrait) {   
+
+  .projBlockWrapper {
+    width: 98%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 25vw;
+    row-gap: 2em;
+  }
+
+  .blockWrapper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 41vw;
+    row-gap: 8em;
+  }
+
 }
 
 /* phones */

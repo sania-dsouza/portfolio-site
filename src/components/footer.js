@@ -8,11 +8,9 @@ const Footer = () => (
     <footer className="footer"
         style={{            
             background: `#2dc492`,
-            padding: `0.25rem 0.5rem 0 0.5rem`,
+            padding: `0.5rem 0.5rem 0 0.5rem`,
             color: `white`,
             fontWeight: `bold`,
-            width: `100%`,
-            height: `100%`,
             fontFamily: `Vollkorn`
             }}>
         

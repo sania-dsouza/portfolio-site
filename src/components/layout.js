@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
       >
       <Header></Header>
 
-      <main style= {{ height: `630px`, overflowY: `auto`, overflowX: `auto` }} className="site-content">{children}</main>
+      <main style= {{ overflow: `auto`, height: `auto` }} className="site-content">{children}</main>
 
       <Footer></Footer>
       

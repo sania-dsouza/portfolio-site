@@ -36,10 +36,11 @@ export default function ProjectBlock() {
         repos.map(repo => 
 
             <div style = {{
-                margin: `1.5rem 1rem 1rem 2rem`,
+                margin: `auto`,
                 padding: `1rem 1.5rem`,
                 fontFamily: `Roboto Condensed`,
                 border: `1px solid`,
+                width: `90%`,
                 height: `100%`,
                 borderRadius: `25px`,
                 backgroundColor: `#ffffff`,

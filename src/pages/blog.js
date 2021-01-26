@@ -18,7 +18,7 @@ const BlogPage = () => (
     </div>
     
     {/* for the projects/blog posts that need to be displayed */}
-    <div className= "blockWrapper" style= {{ width: `100%`, height: `60%`, margin: `auto`}}>
+    <div className= "blockWrapper" style= {{ width: `100%`, height: `160%`, margin: `auto`}}>
       <BlogBlock></BlogBlock>
     </div>
     
