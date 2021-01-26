@@ -36,7 +36,7 @@ export default function BlogBlock() {
                 fontFamily: `Roboto Condensed`,
                 fontSize: `20px`,
                 border: `1px solid`,
-                height: `150%`,
+                height: `130%`,
                 borderRadius: `15px`,
                 backgroundColor: `#ffffff`,
                 color: `#2dc492`,
@@ -51,8 +51,8 @@ export default function BlogBlock() {
                 <div style= {{ marginLeft: `2px`, width: `100%`, height: `45%`, position: `absolute`, bottom: `0`, padding: `2px`}}>
                     <div data-cy="blog-title" style= {{ fontWeight: `bold`, fontSize: `24px`, color: `#357068`}}> {post.node.title} </div>
                     
-                    <div data-cy="blog-subtitle" style= {{overflow: `hidden`, textOverflow: `ellipsis`, width: `100%`}}> 
-                        <div style= {{ fontSize: `18px`, width: `400px`  }}> {post.node.virtuals.subtitle} </div>
+                    <div data-cy="blog-subtitle" style= {{overflow: `hidden`, textOverflow: `ellipsis`, width: `100%`, fontSize: `16px`}}> 
+                        {post.node.virtuals.subtitle} 
                     </div>
                     <div> ... </div>
                     

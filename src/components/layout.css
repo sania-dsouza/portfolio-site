@@ -771,7 +771,7 @@ div.homeImage {
     width: 50%;
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: 40vw;
-    row-gap: 12em;
+    row-gap: 8em;
   }
 }
 
@@ -787,8 +787,8 @@ div.homeImage {
   .blockWrapper {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 90vw;
-    row-gap: 15em;
+    grid-auto-rows: 120vw;
+    row-gap: 10em;
   }
 }
 
@@ -828,3 +828,9 @@ div.homeImage {
     }
 }
 
+/* Blog */
+@media screen and (max-width: 740px) {
+  div[data-cy="blog-subtitle"]{
+    font-size: 16px;
+  }
+}
