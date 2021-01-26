@@ -811,3 +811,10 @@ div.homeImage {
   }
 }
 
+/* Logo */
+@media screen and (max-width: 740px) { 
+    .logo {
+      font-size: 2rem;
+    }
+}
+

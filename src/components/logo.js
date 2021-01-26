@@ -8,6 +8,7 @@ export default function Logo() {
             borderBottom: `4px solid`,
             paddingTop: '30px',
             margin: `0rem auto 1rem`,
+            fontSize: `2.25rem`
         }} className="logo">
             <h1> 
                 sania_dsouza
