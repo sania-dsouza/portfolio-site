@@ -7,19 +7,19 @@
 ## To build the site locally ##
 
 1. **Clone the repo into desired folder on your machine**
-  ```
-  git init
-  git clone 
-  ```
+    ```
+    git init
+    git clone 
+    ```
   
 2. **Enter the root directory of the site**
    ```
-   cd portolio-site
+   cd portfolio-site
    ```
    
 3. **Install dependencies**
    ```
-    npm install 
+   npm install 
    ```
    
 4. **Run the dev server**
