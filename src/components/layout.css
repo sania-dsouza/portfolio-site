@@ -865,14 +865,14 @@ div.homeImage {
 .gallery_image_overlay {
 text-align: center;
 padding-top: 30%;
-opacity: 0%;
+opacity: 0;
 color:black;
 background-color: rgba(255, 255, 255, 0.7);
 cursor: help;
 }
 
-.gallery_image_overlay:hover{
-opacity: 100%;
+.gallery_image_overlay:hover {
+  opacity: 1;
 }
 
 /* tablets */
