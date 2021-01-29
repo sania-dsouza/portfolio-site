@@ -933,5 +933,65 @@ cursor: help;
 
 }
 
+/* Tablets */
+@media screen and (min-width: 750px) and (max-width: 1115px) and (orientation: portrait) {
+  
+  #pin-1 {
+    margin-left: 150px;
+    margin-top: 20px;
+  }
+
+  #pin-2 {
+    margin-left: 320px;
+    margin-top: 20px;
+  }
+
+  #pin-3 {
+    margin-left: 500px;
+    margin-top: 10px;
+  }  
+
+  .home-img{
+    height: 100%;
+    max-width: 65rem;
+  }
+  
+  .home-image {
+    position: absolute; 
+    height: 70%;
+  }
+
+}
+
+@media screen and (min-width: 750px) and (max-width: 1115px) and (orientation: landscape) {
+  
+  #pin-1 {
+    margin-left: 50px;
+    margin-top: 20px;
+  }
+
+  #pin-2 {
+    margin-left: 120px;
+    margin-top: 20px;
+  }
+
+  #pin-3 {
+    margin-left: 170px;
+    margin-top: 10px;
+  }  
+
+  .home-img{
+    height: 100%;
+    max-width: 60rem;
+  }
+  
+  .home-image {
+    position: absolute; 
+    height: 65%;
+  }
+
+}
+
+
 
 

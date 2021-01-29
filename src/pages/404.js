@@ -19,12 +19,8 @@ const NotFoundPage = () => (
       boxShadow: `0 0 10px #357068`
     }}> 
 
-      <div className="image-404"> 
-        <img src={`banana-peel-404.jpg`} alt="banana peel" style= {{ height: `100%`, maxWidth: `55%`, position:"absolute", borderRadius: `20px 0 0 20px`}}/>
-      </div>
-
       <div className= "text-404" style = {{
-        width: `45%`,
+        width: `100%`,
         height: `100%`,
         backgroundColor: `white`,
         textAlign: `center`, 
@@ -33,7 +29,7 @@ const NotFoundPage = () => (
         padding: `6% 5%`,
         fontSize:  `1.5em`,
         fontFamily: `Vollkorn`,
-        borderRadius: `0 20px 20px 0`
+        borderRadius: `20px`
       }}>
         <span style={{ fontWeight: `bold` }}> Oh...oh!  </span>
         <p></p>
