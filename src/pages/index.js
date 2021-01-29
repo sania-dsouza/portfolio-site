@@ -18,8 +18,8 @@ const IndexPage = () => (
     </Helmet>
     <SEO title="Home" />
     
-    <div className="home-image" style={{ width: `100%`, overflow: `auto` }}>
-      <Image />
+    <div className="home-image" style={{ width: `auto`, overflow: `auto`  }}>
+      <Image/>
     </div>
 
     <InfoDialog1></InfoDialog1>
