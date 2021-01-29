@@ -86,10 +86,13 @@
 
     return (
 
-        <header className= "header"
+        <header
           style={{
             background: `#2dc492`,
-            paddingTop: `1rem`
+            paddingTop: `1rem`,
+            width: `100%`,
+            height: `100%`,
+            maxHeight: `300px`,
           }}
         >
           <div
