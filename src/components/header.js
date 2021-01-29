@@ -19,7 +19,7 @@
     display: none;
     height: 100%;
     cursor: pointer;
-    padding: 6vw;
+    padding: 7vw;
 
     @media (max-width: 740px) {
       display: flex;
