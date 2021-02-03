@@ -718,36 +718,6 @@ div.homeImage {
 }
 
 
-/* smaller laptops */
-@media (min-width: 1000px) and (max-width: 1100px) {   
-  .menuIcons  {
-    margin-left: 24vh;
-  }
-
-  .home-image {
-    overflow: hidden;
-  }
-
-  .home-image::-webkit-scrollbar {
-    display: none;
-  }
-
-  #pin-1 {
-    top: 50%;
-    left: 40%;
-  }
-
-  #pin-2 {
-    top: 60%;
-    left: 60%;
-  }
-
-  #pin-3 {
-    top: 60%;
-    left: 200%;
-  } 
-}
-
 /* larger laptops */
 @media (min-width: 1200px) {   
   .menuIcons  {
