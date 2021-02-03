@@ -49,15 +49,15 @@ export default function BlogBlock() {
                 </div>
                 
                 <div style= {{ marginLeft: `2px`, width: `100%`, height: `45%`, position: `absolute`, bottom: `0`, padding: `2px`}}>
-                    <div data-cy="blog-title" style= {{ fontWeight: `bold`, fontSize: `1.25rem`, color: `#357068`}}> {post.node.title} </div>
+                    <div data-cy="blog-title" style= {{ fontWeight: `bold`, fontSize: `24px`, color: `#357068`}}> {post.node.title} </div>
                     
-                    <div data-cy="blog-subtitle" style= {{overflow: `hidden`, textOverflow: `ellipsis`, width: `100%`, fontSize: `0.85rem`}}> 
+                    <div data-cy="blog-subtitle" style= {{overflow: `hidden`, textOverflow: `ellipsis`, width: `100%`, fontSize: `16px`}}> 
                         {post.node.virtuals.subtitle} 
                     </div>
                     <div> ... </div>
                     
                     <Link data-cy="blog-link"
-                        style={{ textDecoration: "none", fontFamily: `Roboto Condensed`, fontSize: `0.75rem`, color: `#357068` }}
+                        style={{ textDecoration: "none", fontFamily: `Roboto Condensed`, fontSize: `16px`, color: `#357068` }}
                         to={`https://medium.com/@sania.dsouza2012/${post.node.uniqueSlug}`}
                         >Continue reading <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
                     </Link>

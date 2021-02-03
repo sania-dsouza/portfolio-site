@@ -94,7 +94,7 @@
         >
           <div
             style={{
-              margin: `0 auto`,
+              margin: `0 auto 1rem auto`,
               maxWidth: 1200,
               textAlign: "center"
             }}

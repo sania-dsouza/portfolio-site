@@ -48,10 +48,10 @@ export default function ProjectBlock() {
                 position: `relative`,
                 }} className= "projBlock">
                 
-                <div data-cy="project-title" style= {{ fontWeight: `bold`, fontSize: `1.25rem`, color: `#357068` }}> {repo.name} </div>
-                <div data-cy="project-description" style= {{ fontSize: `0.85rem` }}> {repo.description} </div>
+                <div data-cy="project-title" style= {{ fontWeight: `bold`, fontSize: `24px`, color: `#357068` }}> {repo.name} </div>
+                <div data-cy="project-description" style= {{ fontSize: `15px` }}> {repo.description} </div>
                 
-                <div data-cy="project-indiv-link" style = {{ position: `absolute`, bottom: `0`, fontSize: `0.75rem`, fontWeight: `bold`, width: `100%`}}> 
+                <div data-cy="project-indiv-link" style = {{ position: `absolute`, bottom: `0`, fontSize: `16px`, fontWeight: `bold`, width: `100%`}}> 
                     <div className= "siteLink"> <a href={repo.url} style= {{ color: `#357068`}}><p>Go to project <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></p></a></div>
                     {/* <div className="siteLink"> <p> {repo.primaryLanguage.name} </p></div> */}
                 </div>
