@@ -669,42 +669,27 @@ div.homeImage {
 }
 
 #pin-1 {
-  top: 40%;
-  left: 22%;
-  position: absolute;
+  top: 400px;
+  left: 350px;
+  /* top: 40%;
+  left: 22%;*/
+  position: absolute; 
 }
 
 #pin-2 {
-  top:65%;
-  left:45%;
+  top: 600px;
+  left: 700px;
+  /* top:65%;
+  left:45%; */
   position: absolute;
 }
 
 #pin-3 {
-  top:50%;
-  left:86%;
+  top: 500px;
+  left: 1400px;
+  /* top:50%;
+  left:86%; */
   position: absolute;
-}
-
-/* Smaller laptops */
-@media screen and (max-width: 1920px) and (min-width: 1080px) {
-  #pin-1 {
-    top: 50%;
-    left: 25%;
-    position: absolute;
-  }
-  
-  #pin-2 {
-    top:75%;
-    left:60%;
-    position: absolute;
-  }
-  
-  #pin-3 {
-    top:50%;
-    left:150%;
-    position: absolute;
-  }
 }
 
 .box:hover > .pin-text {
