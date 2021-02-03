@@ -686,6 +686,27 @@ div.homeImage {
   position: absolute;
 }
 
+/* Smaller laptops */
+@media screen and (max-width: 1920px) and (min-width: 1080px) {
+  #pin-1 {
+    top: 50%;
+    left: 25%;
+    position: absolute;
+  }
+  
+  #pin-2 {
+    top:75%;
+    left:60%;
+    position: absolute;
+  }
+  
+  #pin-3 {
+    top:50%;
+    left:150%;
+    position: absolute;
+  }
+}
+
 .box:hover > .pin-text {
   display: block;
 }
