@@ -669,26 +669,20 @@ div.homeImage {
 }
 
 #pin-1 {
-  top: 400px;
-  left: 350px;
-  /* top: 40%;
-  left: 22%;*/
+  top: 40%;
+  left: 22%;
   position: absolute; 
 }
 
 #pin-2 {
-  top: 600px;
-  left: 700px;
-  /* top:65%;
-  left:45%; */
+  top:65%;
+  left:45%;
   position: absolute;
 }
 
 #pin-3 {
-  top: 500px;
-  left: 1400px;
-  /* top:50%;
-  left:86%; */
+  top:50%;
+  left:86%;
   position: absolute;
 }
 
@@ -728,14 +722,6 @@ div.homeImage {
 @media (min-width: 1200px) {   
   .menuIcons  {
     margin-left: 22vh;
-  }
-
-  .home-image {
-    overflow: hidden;
-  }
-
-  .home-image::-webkit-scrollbar {
-    display: none;
   }
 }
 
@@ -924,7 +910,7 @@ cursor: help;
 
 }
  
-
+/* smaller phones */
  @media screen and (max-width: 680px) {
 
   .home-img{
@@ -941,7 +927,7 @@ cursor: help;
 }
 
 /* Tablets */
-@media screen and (min-width: 750px) and (max-width: 1115px) and (orientation: portrait) {
+/* @media screen and (min-width: 750px) and (max-width: 1115px) and (orientation: portrait) {
   
   #pin-1 {
     margin-left: 150px;
@@ -998,7 +984,7 @@ cursor: help;
   }
 
 }
-
+ */
 
 
 
