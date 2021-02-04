@@ -18,7 +18,7 @@ const NavItem = styled(Link)`
 `
 export default function MenuIcons() {
     return (
-        <div className="menuIcons" style = {{ maxWidth: 1200, textAlign: "center", width: `100%` }}>
+        <div className="menuIcons" style = {{ padding: `0 auto 1rem auto`, maxWidth: 1200, textAlign: "center", width: `100%` }}>
             <NavItem to = "/projects"><FontAwesomeIcon icon={faFileCode} className="icon" size="3x" title="Projects"/> </NavItem>
             <NavItem to = "/blog"><FontAwesomeIcon icon={faBookmark} className="icon" size="3x" title="Reading"/> </NavItem>
             <NavItem to = "/gallery"><FontAwesomeIcon icon={faCamera} className="icon" size="3x" title="Gallery"/> </NavItem>
