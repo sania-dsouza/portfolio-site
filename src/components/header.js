@@ -19,7 +19,7 @@
     display: none;
     height: 100%;
     cursor: pointer;
-    padding: 7vw;
+    padding: 4vw 7vw 7vw 7vw;
 
     @media (max-width: 740px) {
       display: flex;
@@ -36,6 +36,7 @@
       flex-direction: column;
       position: fixed;
       width: 25%;
+      height: 55%;
       justify-content: flex-start;
       padding-top: 10vh;
       background-color: #fff;
