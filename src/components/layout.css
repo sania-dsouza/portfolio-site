@@ -912,8 +912,8 @@ cursor: help;
 
   .pin-text {
     position: absolute;
-    width: 650%;
-    transform:translateY(-50%) translateX(-70%);  
+    width: 480%;
+    transform:translateY(-40%) translateX(-70%);  
     display: none;
   }
 }
