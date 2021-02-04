@@ -19,7 +19,7 @@ const Image = () => {
     return <div>Picture not found</div>
   }
 
-  return <Img className="home-img" fluid={data.placeholderImage.childImageSharp.fluid} style= {{ width: `1668px`}} imgStyle= {{ objectFit: `contain` }} />
+  return <Img className="home-img" fluid={data.placeholderImage.childImageSharp.fluid} style= {{ width: `auto`, height: `auto`}} imgStyle= {{ objectFit: `cover` }} />
 }
 
 export default Image

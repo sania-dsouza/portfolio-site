@@ -643,7 +643,7 @@ div.homeImage {
 
 .site {
   display: flex;
-  min-height: 100vh;
+  min-height: 98vh;
   flex-direction: column;
 }
 
@@ -698,16 +698,6 @@ div.homeImage {
   display: none;
 }
 
-/* Phones */
-@media (max-width: 740px) {
-  .pin-text {
-    position: absolute;
-    width: 650%;
-    transform:translateY(25%) translateX(-90%);  
-    display: none;
-  }
-}
-
 .fa-snowflake, .fa-calendar, .fa-utensils, .fa-heart, 
 .fa-home, .fa-umbrella-beach, .fa-temperature-high, .fa-magic, .fa-wind, .fa-futbol, .fa-plane, .fa-baby-carriage {
   color: #357068;
@@ -718,10 +708,10 @@ div.homeImage {
 }
 
 
-/* larger laptops */
-@media (min-width: 1200px) {   
+/* laptops */
+@media (min-width: 1070px) {   
   .menuIcons  {
-    margin-left: 22vh;
+    margin-left: 18%;
   }
 }
 
@@ -744,6 +734,7 @@ div.homeImage {
 @media (max-width: 740px) and (orientation: portrait) {
   .home-image {
     height: 100%;
+    width: auto;
   }
 }
 
@@ -889,98 +880,66 @@ cursor: help;
   } 
 
 /* Home page styles */
-/* Phones */
+ 
+/* phones */
+ @media screen and (max-width: 740px) {
 
-@media screen and (max-width: 740px) {
-  
+  .home-image {
+    margin-top: 12vh;
+    height: 100%;
+    width: 120%;
+  }
+
+  .box {
+    width:7%;
+    height:7%;
+  }
+
   #pin-1 {
-    margin-left: 150px;
-    margin-top: 20px;
+    top: 40%;
+    left: 25%;
   }
 
   #pin-2 {
-    margin-left: 320px;
-    margin-top: 20px;
+    top: 47%;
+    left: 55%;
   }
 
   #pin-3 {
-    margin-left: 600px;
-    margin-top: 10px;
-  }  
-
-}
- 
-/* smaller phones */
- @media screen and (max-width: 680px) {
-
-  .home-img{
-    height: 100%;
-    max-width: 65rem;
-  }
-  
-  .home-image {
-    position: absolute; 
-    overflow: none;
-    height: 60%;
+    top: 42%;
+    left: 85%;
   }
 
+  .pin-text {
+    position: absolute;
+    width: 650%;
+    transform:translateY(-50%) translateX(-70%);  
+    display: none;
+  }
 }
 
 /* Tablets */
 @media screen and (min-width: 750px) and (max-width: 1115px) and (orientation: portrait) {
-  
-  #pin-1 {
-    margin-left: 150px;
-    margin-top: 20px;
+
+  .home-image {
+    margin-top: 12vh;
+    height: 100%;
+    width: 120%;
   }
 
   #pin-2 {
-    margin-left: 320px;
-    margin-top: 20px;
-  }
-
-  #pin-3 {
-    margin-left: 500px;
-    margin-top: 10px;
-  }  
-
-  .home-img{
-    height: 100%;
-    max-width: 65rem;
-  }
-  
-  .home-image {
-    position: absolute; 
-    height: 70%;
+    top: 50%;
+    left: 50%;
   }
 
 }
 
 @media screen and (min-width: 750px) and (max-width: 1115px) and (orientation: landscape) {
   
-  #pin-1 {
-    margin-left: 50px;
-    margin-top: 20px;
-  }
-
-  #pin-2 {
-    margin-left: 120px;
-    margin-top: 20px;
-  }
-
-  #pin-3 {
-    margin-left: 170px;
-    margin-top: 10px;
-  }  
-
-  .home-img{
-    height: 100%;
-    max-width: 60rem;
-  }
-  
   .home-image {
-    position: absolute; 
-    height: 65%;
+    margin-top: 12vh;
+    height: 100%;
+    width: 120%;
   }
 
 }
