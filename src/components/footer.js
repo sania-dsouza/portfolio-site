@@ -21,7 +21,6 @@ const Footer = () => (
                 >
                 <span>
                 © {new Date().getFullYear()}. Built with Gatsby.
-                {` `} See how <a href="https://github.com/sania-dsouza/personal_site" style= {{ color: `#ffd100`}}>here</a>.
                 </span>   
             </div>
 

@@ -19,7 +19,8 @@
     display: none;
     height: 100%;
     cursor: pointer;
-    padding: 4vw 7vw 7vw 7vw;
+    padding: 1.5rem;
+    text-align: left;
 
     @media (max-width: 740px) {
       display: flex;
@@ -53,10 +54,9 @@
   width: 30px;
   height: 3px;
   transition: all .3s linear;
-  align-self: center;
+  
   position: relative;
   z-index: 12000;
-  color: #357068;
   transform: ${props => (props.open ? "rotate(-50deg)" : "inherit")};
 
   ::before,
@@ -71,7 +71,7 @@
 
   ::before {
     transform: ${props =>
-      props.open ? "rotate(-90deg) translate(-10px, -14px)" : "rotate(0deg)"};
+      props.open ? "rotate(-90deg) translate(-10px, -0px)" : "rotate(0deg)"};
     top: -10px;
   }
 
@@ -79,7 +79,8 @@
     opacity: ${props => (props.open ? "0" : "1")};
     transform: ${props => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
     top: 10px;
-  }`
+  }
+  `
 
   const Header = () => {
 
@@ -114,13 +115,14 @@
 
             <Navigation>
 
-            <Toggle
-              navbarOpen={navbarOpen}
-              onClick={() => setNavbarOpen(!navbarOpen)}
-            >
-              {navbarOpen ? <Hamburger open /> : <Hamburger />}
-            </Toggle>
-
+            
+              <Toggle
+                navbarOpen={navbarOpen}
+                onClick={() => setNavbarOpen(!navbarOpen)}
+              >
+                {navbarOpen ? <Hamburger open /> : <Hamburger />}
+              </Toggle>
+            
             
             {navbarOpen ? (
               <Navbox>
