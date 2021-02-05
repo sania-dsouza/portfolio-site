@@ -52,7 +52,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "./node_modules/.bin/cypress run",
-    "test:e2e": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test develop http://localhost:8000 test"
+    "test:e2e": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test develop http://localhost:8000 test",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",
