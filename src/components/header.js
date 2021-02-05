@@ -19,7 +19,7 @@
     display: none;
     height: 100%;
     cursor: pointer;
-    padding: 1.5rem;
+    padding: 8% 5% 6% 5%;
     text-align: left;
 
     @media (max-width: 740px) {
