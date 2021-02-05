@@ -5,6 +5,7 @@ dotenv.config();
 const { githubApiQuery } = require('./github-api')   // import the API query created 
 
 module.exports = {
+  pathPrefix: "/portfolio-site",
 
   siteMetadata: {
     title: `Sania D Souza`,
@@ -84,6 +85,7 @@ module.exports = {
           showSpinner: true,
         },
       },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
