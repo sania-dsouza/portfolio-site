@@ -9,8 +9,8 @@ export default function infoDialog() {
                 <span style={{ padding: ` 5px 5px `, color: `#357068`}}> <b>Delhi, India</b></span>
                 <br/>
                 <span style={{ padding: `5px 5px`, fontSize: `15px`}}>
-                    Born and partly brought up in coastal India.&nbsp; <FontAwesomeIcon icon={faBabyCarriage}></FontAwesomeIcon> <br/>
-                    &nbsp;  Home is where the heart is. &nbsp; <FontAwesomeIcon icon={faHeart}></FontAwesomeIcon> &nbsp; <FontAwesomeIcon icon={faHome}></FontAwesomeIcon>
+                    <FontAwesomeIcon icon={faBabyCarriage}></FontAwesomeIcon> &nbsp; Born and partly brought up in coastal India.&nbsp;  <br/>
+                    &nbsp;&nbsp;<FontAwesomeIcon icon={faHeart}></FontAwesomeIcon> <FontAwesomeIcon icon={faHome}></FontAwesomeIcon> &nbsp;  Home is where the heart is. &nbsp; 
                 </span>
             </div>
         </div>

@@ -10,9 +10,9 @@ export default function infoDialog() {
                 <br/>
                 <span style={{ padding: `5px 5px`, fontSize: `15px`}}>
                     Lived my first 13 years in the land of pearls.<br/>
-                    &nbsp; #beaches <FontAwesomeIcon icon={faUmbrellaBeach}></FontAwesomeIcon> &nbsp; &nbsp; #desert <FontAwesomeIcon icon={faWind}></FontAwesomeIcon>
-                    &nbsp;&nbsp;  #hot <FontAwesomeIcon icon={faTemperatureHigh}></FontAwesomeIcon>&nbsp; &nbsp;#football <FontAwesomeIcon icon={faFutbol}></FontAwesomeIcon>
-                    &nbsp;&nbsp; #magical  <FontAwesomeIcon icon={faMagic}></FontAwesomeIcon>
+                    &nbsp;&nbsp;<FontAwesomeIcon icon={faUmbrellaBeach}></FontAwesomeIcon> #beaches  &nbsp; <FontAwesomeIcon icon={faWind}></FontAwesomeIcon> #desert 
+                    &nbsp;&nbsp;<FontAwesomeIcon icon={faTemperatureHigh}></FontAwesomeIcon> #hot    &nbsp; <FontAwesomeIcon icon={faFutbol}></FontAwesomeIcon>#football 
+                    &nbsp;&nbsp;<FontAwesomeIcon icon={faMagic}></FontAwesomeIcon>#magical  
                 </span>
             </div>
         </div>
