@@ -781,16 +781,17 @@ div.homeImage {
   .projBlockWrapper {
     width: 98%;
     grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 50vw;
+    grid-auto-rows: 60vw;
     row-gap: 2em;
   }
 
   .blockWrapper {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 90vw;
-    row-gap: 8em;
+    grid-auto-rows: 180%;
+    row-gap: 10em;
   }
+
 }
 
 /* 404 page */
