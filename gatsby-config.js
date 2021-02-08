@@ -5,7 +5,7 @@ dotenv.config();
 const { githubApiQuery } = require('./github-api')   // import the API query created 
 
 module.exports = {
-  pathPrefix: "/portfolio-site",
+  // pathPrefix: "/portfolio-site",
 
   siteMetadata: {
     title: `Sania D Souza`,
