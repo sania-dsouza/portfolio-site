@@ -4,7 +4,6 @@
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
 
-require('./src/components/layout.css');
 
 
 
