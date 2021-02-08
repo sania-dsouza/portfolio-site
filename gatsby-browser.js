@@ -5,9 +5,7 @@
  */
 
 require('./src/components/layout.css');
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFileCode, faBookmark, faCamera, faLeaf, faBriefcase } from '@fortawesome/free-solid-svg-icons'
-import styled from "styled-components"
+
 
 
 
