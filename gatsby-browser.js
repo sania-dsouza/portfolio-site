@@ -5,6 +5,7 @@
  */
 
 require('./src/components/layout.css');
+import styled from "styled-components"
 
 
 
