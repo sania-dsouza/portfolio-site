@@ -18,11 +18,11 @@ const NavItem = styled(Link)`
 `
 export default function MenuIcons() {
     return (
-        <div className="menuIcons" style = {{ padding: `0 auto 1rem auto`, maxWidth: 1200, textAlign: "center", width: `100%` }}>
-            <NavItem to = "/projects"><FontAwesomeIcon icon={faFileCode} className="icon" size="3x" title="Projects"/> </NavItem>
-            <NavItem to = "/blog"><FontAwesomeIcon icon={faBookmark} className="icon" size="3x" title="Reading"/> </NavItem>
-            <NavItem to = "/gallery"><FontAwesomeIcon icon={faCamera} className="icon" size="3x" title="Gallery"/> </NavItem>
-            <NavItem to = "https://drive.google.com/file/d/1fQuZUfnP_i9tRplF8Vfj3jDBx-3KZfr1/view?usp=sharing"><FontAwesomeIcon icon={faBriefcase} className="icon" size="3x" title="Projects"/> </NavItem>
+        <div className="menuIcons" style = {{ padding: `0 auto 1rem auto`, textAlign: "center", width: `100%` }}>
+            <NavItem to = "/projects"><FontAwesomeIcon icon={faFileCode} className="icon" title="Projects"/> </NavItem>
+            <NavItem to = "/blog"><FontAwesomeIcon icon={faBookmark} className="icon" title="Reading"/> </NavItem>
+            <NavItem to = "/gallery"><FontAwesomeIcon icon={faCamera} className="icon" title="Gallery"/> </NavItem>
+            <NavItem to = "https://drive.google.com/file/d/1fQuZUfnP_i9tRplF8Vfj3jDBx-3KZfr1/view?usp=sharing"><FontAwesomeIcon icon={faBriefcase} className="icon" title="Projects"/> </NavItem>
 
             {/* <a href="file:///Users/saniadsouza/Personal_Projects/personal_site/personal_site/src/resources/resume.pdf" download="resume" style={{ paddingRight: `5rem`, color: `#357068` }}><FontAwesomeIcon icon={faBriefcase} className="icon" size="3x" title="Download my resume"/></a> */}
             {/* <a href="/pot-pourri" style={{ paddingRight: `5rem`, color: `#357068` }}><FontAwesomeIcon icon={faLeaf} className="icon" size="3x" title="Pot Pourri"/></a> */}

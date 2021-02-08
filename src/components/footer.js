@@ -33,9 +33,9 @@ const Footer = () => (
                 Let's connect: 
                 </span> */}
                 <span data-cy="social-links">
-                <a href="mailto:sania.dsouza2012@gmail.com" style={{ paddingLeft: `1rem`, color: `#e3dcdc`}}><FontAwesomeIcon icon= {faEnvelope} className= "fIcon" size="2x" aria-label="Gmail" title="Gmail"/></a>
-                <a href="https://www.linkedin.com/in/saniadsouza/" style={{ paddingLeft: `1.5rem`, color: `#e3dcdc`}}><FontAwesomeIcon icon= {faLinkedin} className= "fIcon" size="2x" aria-label="LinkedIn" title="LinkedIn"/></a>
-                <a href="https://github.com/sania-dsouza" data-cy="projectLink" style={{ paddingLeft: `1.5rem`, color: `#e3dcdc`}}><FontAwesomeIcon icon= {faCodeBranch} className= "fIcon" size="2x" aria-label="Github" title="Github"/></a>
+                <a href="mailto:sania.dsouza2012@gmail.com" style={{ paddingLeft: `1rem`, color: `#e3dcdc`}}><FontAwesomeIcon icon= {faEnvelope} className= "fIcon" aria-label="Gmail" title="Gmail"/></a>
+                <a href="https://www.linkedin.com/in/saniadsouza/" style={{ paddingLeft: `1.5rem`, color: `#e3dcdc`}}><FontAwesomeIcon icon= {faLinkedin} className= "fIcon" aria-label="LinkedIn" title="LinkedIn"/></a>
+                <a href="https://github.com/sania-dsouza" data-cy="projectLink" style={{ paddingLeft: `1.5rem`, color: `#e3dcdc`}}><FontAwesomeIcon icon= {faCodeBranch} className= "fIcon" aria-label="Github" title="Github"/></a>
                 
                 </span>
             </div>

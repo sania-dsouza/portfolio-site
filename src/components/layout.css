@@ -600,6 +600,15 @@ pre tt:after {
 }
 
 .icon {
+  color: #357068;
+  font-size: 300%;
+}
+
+.fIcon {
+  font-size: 200%;
+}
+
+.icon {
   stroke: #ffffff;
   stroke-width: 10;
 }
