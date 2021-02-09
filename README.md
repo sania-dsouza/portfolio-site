@@ -4,6 +4,8 @@
 
 [![master Actions Status](https://github.com/sania-dsouza/portfolio-site/workflows/Node.js%20CI/badge.svg)](https://github.com/sania-dsouza/portfolio-site/actions)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/53ea8587-468b-4024-86dd-01407e90ff87/deploy-status)](https://app.netlify.com/sites/sania-dsouza/deploys)
+
 ## To build the site locally ##
 
 1. **Clone the repo into desired folder on your machine**
