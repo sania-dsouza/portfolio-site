@@ -11,10 +11,12 @@ module.exports = {
     title: `Sania D Souza`,
     description: `My home on the world wide web!`,
     author: `Sania`,
+    siteUrl: "https://www.sania-dsouza.com"
   },
   
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
