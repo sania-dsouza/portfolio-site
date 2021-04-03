@@ -6,7 +6,7 @@ export default function Logo() {
         <div style = {{ 
             display: `inline-block`,
             borderBottom: `4px solid`,
-            paddingTop: '30px',
+            paddingTop: '5px',
             margin: `0rem auto 1rem`,
             fontSize: `2.25rem`
         }} className="logo">

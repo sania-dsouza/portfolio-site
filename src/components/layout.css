@@ -954,6 +954,13 @@ cursor: help;
 
 }
 
+.about-text {
+  color: white;
+  padding: 0 0 0.75rem 0;
+  font-size: 1em;
+  font-weight: bold;
+}
+
 
 
 

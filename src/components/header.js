@@ -19,7 +19,7 @@
     display: none;
     height: 100%;
     cursor: pointer;
-    padding: 8% 5% 6% 5%;
+    padding: 1% 5% 6% 5%;
     text-align: left;
 
     @media (max-width: 740px) {
@@ -112,6 +112,11 @@
             >
               <Logo> </Logo>
             </Link>
+              
+            <div className="about-text">
+              Software developer. <br/> Focused on building 
+              light and usable websites.
+            </div>
 
             <Navigation>
 
