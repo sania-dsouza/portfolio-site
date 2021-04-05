@@ -638,8 +638,7 @@ div.homeImage {
 .projBlockWrapper {
   display: grid;
   overflow: hidden;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 13vw;
+  grid-auto-rows: 20vw;
   row-gap: 2em;
 }
 
@@ -648,6 +647,12 @@ div.homeImage {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 21vw;
   row-gap: 5em;
+}
+
+.projImage {
+  width: 52%;
+  height: 100%;
+  position: absolute;
 }
 
 .site {
@@ -702,7 +707,7 @@ div.homeImage {
 .pin-text {
   position: absolute;
   width: 350%;
-  transform:translateY(-90%) translateX(-90%);  
+  transform:translateY(-90%) translateX(-80%);  
   left:75%;
   display: none;
 }

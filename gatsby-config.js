@@ -9,7 +9,7 @@ module.exports = {
 
   siteMetadata: {
     title: `Sania D Souza`,
-    description: `My home on the world wide web!`,
+    description: `I came, I learnt, I can help! Software developer based out of Toronto.`,
     author: `Sania`,
     siteUrl: "https://www.sania-dsouza.com"
   },
