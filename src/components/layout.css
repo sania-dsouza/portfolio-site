@@ -62,8 +62,14 @@ template {
 }
 a {
   background-color: transparent;
+  color: blue ;
   -webkit-text-decoration-skip: objects;
 }
+
+a:hover {
+  color: #2dc492;
+}
+
 a:active,
 a:hover {
   outline-width: 0;

@@ -18,7 +18,7 @@ export default function BlogBlock() {
                         title
                         author
                         }
-                        excerpt(pruneLength: 150)
+                        excerpt(pruneLength: 190)
                         id
                         timeToRead
                     }
@@ -50,18 +50,22 @@ export default function BlogBlock() {
                     <img width= "100%" height="100%" src={`https://cdn-images-1.medium.com/max/400/${post.node.virtuals.previewImage.imageId}`}/>
                 </div>  */}
                 
-                <div style= {{ marginLeft: `2px`, width: `100%`, height: `100%`, position: `absolute`, bottom: `0`, padding: `2px`}}>
+                <div style= {{ marginLeft: `2px`, width: `100%`, height: `100%`, position: `absolute`, bottom: `0`, paddingTop: `0.75em`}}>
                     <Link to={post.fields.slug}>
                         <div data-cy="project-title" style= {{ fontWeight: `bold`, fontSize: `24px`, color: `#357068`}}> {post.frontmatter.title} </div>
                     </Link>
                     <small>{post.frontmatter.date}, {post.timeToRead} min read</small>
-                    <p style= {{ fontWeight: `bold`, fontSize: `16px`, color: `#357068`}}>{post.excerpt}</p>                    
+                    <p style= {{ fontSize: `0.85em`, color: `#357068`, padding: `0 1em 0 0`}}>{post.excerpt}</p>                    
                     
-                    {/* <Link data-cy="blog-link"
+                    {/* <Link data-cy="external-link"
                         style={{ textDecoration: "none", fontFamily: `Roboto Condensed`, fontSize: `16px`, color: `#357068` }}
-                        to={`https://medium.com/@sania.dsouza2012/${post.node.uniqueSlug}`}
-                        ><img/>
+                        to={`/`}
+                        >
+                            <div style= {{ width: `5%`, height: `5%`}}>
+                                <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-black.png" alt="DevTO Icon" />
+                            </div>
                     </Link> */}
+
                 </div>
                 
                 
