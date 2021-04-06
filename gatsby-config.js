@@ -9,7 +9,7 @@ module.exports = {
 
   siteMetadata: {
     title: `Sania D Souza`,
-    description: `I came, I learnt, I can help! Software developer based out of Toronto.`,
+    description: `Software developer based out of Toronto. I get things done!`,
     author: `Sania`,
     siteUrl: "https://www.sania-dsouza.com"
   },
@@ -24,6 +24,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/blog/`,
+        },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

@@ -25,6 +25,8 @@
     "gatsby-source-filesystem": "^2.8.1",
     "gatsby-source-github-api": "^0.2.1",
     "gatsby-source-medium": "^2.8.0",
+    "gatsby-source-wordpress": "^5.2.1",
+    "gatsby-transformer-remark": "^3.2.0",
     "gatsby-transformer-sharp": "^2.9.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
