@@ -13,10 +13,10 @@ const IndexPage = () => (
     <Helmet>
       <meta charSet="utf-8" />
       <title>Home</title>
-      <description>Test</description>
-      <link rel="canonical" href="http://localhost:8000" />
+      <description>Software developer based out of Toronto. I can help!</description>
+      <meta name="keywords" content="sania, software development, web development, freelancer, website" />
     </Helmet>
-    <SEO title="Home" />
+    <SEO title="Home" keywords={ ["home", "test"] }/>
     
     <div className="home-image" style={{ width: `auto`, overflow: `auto`  }}>
       <Image/>

@@ -10,9 +10,11 @@ const ProjectsPage = () => (
     <Helmet>
       <meta charSet="utf-8" />
       <title>Projects</title>
-      <link rel="canonical" href="http://localhost:8000/projects" />
+      <description> Mix of front-end and back-end projects I've worked on. They include the most commonly used functionalities in the software dev space today</description>
+      <meta name="keywords" content="sania, software development, web development, freelancer, website" />
     </Helmet>
-    <SEO title="Projects" />
+
+    <SEO title="Projects" keywords={ ["projects", "freelance", "javascript", "react", "vue", "django", "python"] } />
     
     <div style= {{ textAlign: `center`, marginTop: `1rem`, padding: `auto`, color: `#e3dcdc`, fontFamily: 'Vollkorn', fontWeight: `bold`, fontSize: `32px`}}>
       <div>Projects</div>

@@ -9,9 +9,11 @@ const BlogPage = () => (
     <Helmet>
       <meta charSet="utf-8" />
       <title>Reading</title>
-      <link rel="canonical" href="http://localhost:8000/blog" />
+      <description></description>
+      <meta name="keywords" content="sania, software development, web development, freelancer, website" />
     </Helmet>
-    <SEO title="Reading" />
+
+    <SEO title="Reading" keywords={ ["blog", "learning", "node", "testing", "beginner", "developer", "2021"] } />
     
     <div style= {{ textAlign: `center`, marginTop: `1rem`, padding: `auto`, color: `#e3dcdc`, fontFamily: 'Vollkorn', fontWeight: `bold`, fontSize: `32px`}}>
       <div>Reading</div>

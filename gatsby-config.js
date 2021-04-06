@@ -9,9 +9,10 @@ module.exports = {
 
   siteMetadata: {
     title: `Sania D Souza`,
-    description: `My home on the world wide web!`,
+    description: `Software developer based out of Toronto. I can help!`,
     author: `Sania`,
-    siteUrl: "https://www.sania-dsouza.com"
+    siteUrl: "https://www.sania-dsouza.com",
+    keywords: ["test"]
   },
   
   plugins: [

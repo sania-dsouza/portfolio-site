@@ -43,9 +43,11 @@ export default function GalleryPage() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Gallery</title>
-        <link rel="canonical" href="http://localhost:8000/gallery" />
+        <description>Scenic images of daily life captured by friends, family and me. Nature and life have a lot to offer if you sit back and watch.</description>
+        <meta name="keywords" content="sania, software development, web development, freelancer, website" />
       </Helmet>
-      <SEO title="Gallery" />
+
+      <SEO title="Gallery" keywords={ ["gallery", "scenery", "free", "photography"] }/>
       
       <div style= {{ textAlign: `center`, marginTop: `1rem`, color: `#e3dcdc`, fontFamily: 'Vollkorn', fontWeight: `bold`, fontSize: `32px`}}>
         <p>Gallery</p>
