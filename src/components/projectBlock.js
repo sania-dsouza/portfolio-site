@@ -53,7 +53,7 @@ export default function ProjectBlock() {
                 </div>
 
                 <div style={{ width: `46%`, float: `right`, margin: `0.25rem`}}>
-                  <div data-cy="project-title" style= {{ fontWeight: `bold`, fontSize: `24px`, color: `#357068`, paddingTop: `0.5em` }}> { repo.frontmatter.title } </div>
+                  <div data-cy="project-title" style= {{ fontWeight: `bold`, fontSize: `24px`, color: `#357068`, paddingTop: `0.5em` }}> <a href={ repo.frontmatter.link } style= {{ color: `#357068`}}> { repo.frontmatter.title } </a> </div>
                   <div data-cy="project-tech" style= {{ fontWeight: `bold`, fontSize: `16px` }}> <span style={{ fontSize: `20px` }}>&middot;</span> { repo.frontmatter.tech } </div>
                   
                   <div data-cy="project-description" style= {{ fontSize: `0.85em`, color: `#357068` }}> { repo.excerpt } </div>

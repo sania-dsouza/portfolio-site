@@ -56,7 +56,7 @@ export default function BlogBlock() {
                     <Link to={post.fields.slug}>
                         <div data-cy="project-title" style= {{ fontWeight: `bold`, fontSize: `24px`, color: `#357068`}}> {post.frontmatter.title} </div>
                     </Link>
-                    <small>{post.frontmatter.date}, {post.timeToRead} min read</small>
+                    <small>{post.frontmatter.date} <span style={{ fontSize: `20px` }}>&middot;</span>  {post.timeToRead} min read</small>
                     <p style= {{ fontSize: `0.85em`, color: `#357068`, padding: `0 1em 0 0`}}>{post.excerpt}</p>                    
                     
                     {/* <Link data-cy="external-link"
