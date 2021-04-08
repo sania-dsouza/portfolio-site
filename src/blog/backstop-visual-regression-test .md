@@ -1,6 +1,7 @@
 ---
 title: Prevent visual regression bugs with BackstopJS
 date: 2021-04-06
+featuredImage: ../images/favicon.png
 ---
 
 Testing could be a lot of work if you are responsible for the visual (or even functional) feels of a website. And picking out visual differences after seemingly-unrelated code changes could be a pain. [BackstopJS](https://github.com/garris/BackstopJS) is one of the tools that could help automate this bit. 

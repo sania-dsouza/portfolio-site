@@ -1,6 +1,7 @@
 ---
 title: Artillery -- Quick check your site's  performance 
 date: 2021-04-06
+featuredImage: ../images/favicon.png
 ---
 
 Jmeter is a great performance testing tool but has a steep learning curve and could take long to set up. Sometimes, there is just not enough time for that. Come in [Artillery](https://artillery.io/) !

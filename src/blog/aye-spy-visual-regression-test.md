@@ -2,6 +2,7 @@
 title: Rest your eye with AyeSpy -- Automated visual testing
 author: Sania
 date: 2021-04-06
+featuredImage: ../images/favicon.png
 ---
 
 A lesser known but still useful tool to automate visual testing for your project -- [Aye Spy](https://github.com/newsuk/AyeSpy) can save precious time between development iterations. 

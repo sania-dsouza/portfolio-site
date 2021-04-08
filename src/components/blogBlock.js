@@ -2,21 +2,22 @@ import React from "react"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link, useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 export default function BlogBlock() {
 
     const data = useStaticQuery(
         graphql`
             query BlogQuery {
-                blog: allMarkdownRemark {
+                blog: allMarkdownRemark(filter: {fields: {collection: {eq: "blog"}}}) {
                     posts: nodes {
                         fields {
                             slug
                         }
                         frontmatter {
-                        date(fromNow: true)
-                        title
-                        author
+                            date(fromNow: true)
+                            title
+                            author
                         }
                         excerpt(pruneLength: 190)
                         id
@@ -28,10 +29,11 @@ export default function BlogBlock() {
 
     const { posts } = data.blog
     
+
     return (
 
         posts.map(post => 
-
+            
             <div style = {{
                 margin: `1.5rem 2rem 0 2rem`,
                 fontFamily: `Roboto Condensed`,

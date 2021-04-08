@@ -646,6 +646,7 @@ div.homeImage {
   overflow: hidden;
   grid-auto-rows: 20vw;
   row-gap: 2em;
+  margin: 1em auto;
 }
 
 .blockWrapper {

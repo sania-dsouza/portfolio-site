@@ -2,6 +2,7 @@
 title: Test for visual regression with Jest-image-snapshot
 author: Sania
 date: 2021-04-06
+featuredImage: ../images/favicon.png
 ---
 
 Jest has a feature called snapshot testing where a serializable value for the React tree is generated and then compared with a reference snapshot to check for differences.

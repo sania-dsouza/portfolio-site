@@ -1,6 +1,7 @@
 ---
 title: How to use environment variables at build using Github Actions
 date: 2021-04-06
+featuredImage: ../images/favicon.png
 ---
 
 I recently ran into an issue when I needed to apply a continuous integration pipeline to my Gatsby portfolio site on Github. Github Actions seemed like a natural choice due to its ease of set-up. I used their readymade Node workflow action. 
