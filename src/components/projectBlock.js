@@ -62,6 +62,7 @@ export default function ProjectBlock() {
                       <div className= "siteLink"> <a href={ repo.frontmatter.link } style= {{ color: `#357068`}}><p>Go to project <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></p></a></div>
                       {/* <div className="siteLink"> <p> {repo.primaryLanguage.name} </p></div> */}
                   </div>
+                  
                 </div>
                 
                 

@@ -1,5 +1,5 @@
 ---
-title: Dora bakes -- baked goods recipe repo
+title: Dora bakes -- Recipe list
 date: 2021-04-07
 featuredImage: ../images/gatsby-astronaut.png
 tech: Python, Javascript

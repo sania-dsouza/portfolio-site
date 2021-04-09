@@ -646,7 +646,7 @@ div.homeImage {
   overflow: hidden;
   grid-auto-rows: 20vw;
   row-gap: 2em;
-  margin: 1em auto;
+  margin: 1em auto 2em auto;
 }
 
 .blockWrapper {
@@ -978,6 +978,14 @@ cursor: help;
   width: 80%;
   padding: 1em;
   margin : 3em auto;
+}
+
+.blogWidgetDiv > div  {
+  padding: 1.5em;
+  border-radius: 25px;
+  width: 10%;
+  margin: 0 auto;
+  display: inline-block;
 }
 
 

@@ -14,7 +14,7 @@ const ProjectsPage = () => (
     </Helmet>
     <SEO title="Projects" />
     
-    <div style= {{ textAlign: `center`, marginTop: `1rem`, padding: `auto`, color: `#e3dcdc`, fontFamily: 'Vollkorn', fontWeight: `bold`, fontSize: `32px`}}>
+    <div style= {{ textAlign: `center`, marginTop: `1rem`, padding: `auto`, color: `white`, fontFamily: 'Vollkorn', fontWeight: `bold`, fontSize: `32px`}}>
       <div>Projects</div>
     </div>
     

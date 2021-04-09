@@ -47,7 +47,7 @@ export default function GalleryPage() {
       </Helmet>
       <SEO title="Gallery" />
       
-      <div style= {{ textAlign: `center`, marginTop: `1rem`, color: `#e3dcdc`, fontFamily: 'Vollkorn', fontWeight: `bold`, fontSize: `32px`}}>
+      <div style= {{ textAlign: `center`, marginTop: `1rem`, color: `white`, fontFamily: 'Vollkorn', fontWeight: `bold`, fontSize: `32px`}}>
         <p>Gallery</p>
       </div>
       
