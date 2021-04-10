@@ -14,7 +14,7 @@ export default function BlogPost({ data }) {
       <Link to="/blog" style={{ color: `#357068`, fontWeight: `bold`}}> <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon> &nbsp; Go back </Link>
       <p></p>
       <h1>{post.frontmatter.title}</h1>
-      <p style={{ fontSize: `16px`}}>{post.frontmatter.date} <span style={{ fontSize: `20px` }}>&middot;</span>  {post.timeToRead} min read</p>
+      <p style={{ fontSize: `16px`}}>{post.timeToRead} min read</p>
       {/* <Img fluid={featuredImgFluid} /> */}
       <div style={{ fontSize: `22px`}} dangerouslySetInnerHTML={{ __html: post.html }} />
       <p></p>
@@ -28,7 +28,6 @@ export const query = graphql`
       html
       frontmatter {
         title
-        date(fromNow: true)
         # featuredImage {
         #   childImageSharp {
         #     fluid(maxWidth: 800) {
