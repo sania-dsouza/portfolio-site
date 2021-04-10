@@ -1129,3 +1129,11 @@ cursor: help;
   }
 }
 
+/* Blog post styles */
+/* phones */
+@media (max-width: 740px) and (orientation:portrait)
+  {
+    .blogPost {
+      width: 95%;
+    }
+  }
