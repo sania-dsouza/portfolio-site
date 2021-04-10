@@ -639,6 +639,25 @@ div.homeImage {
 
 .projBlock {
   box-shadow: 0 0 10px #357068;
+  width: 70%;
+}
+
+.projText {
+  width: 46%;
+  float: right;
+  margin: 0.25rem;
+}
+
+.projTitle {
+  font-weight: bold; 
+  font-size: 24px;
+  color: #357068;
+  padding-top: 0.5em;
+}
+
+.projTech {
+  font-weight: bold;
+  font-size: 16px; 
 }
 
 .projBlockWrapper {
@@ -652,7 +671,7 @@ div.homeImage {
 .blockWrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 35vh;
+  grid-auto-rows: 32vh;
 }
 
 .projImage {
@@ -773,8 +792,8 @@ div.homeImage {
 
   .blockWrapper {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 41vw;
-    row-gap: 8em;
+    grid-auto-rows: 35vw;
+    row-gap: 1em;
   }
 
 }
@@ -790,8 +809,8 @@ div.homeImage {
 
   .blockWrapper {
     grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 41vw;
-    row-gap: 8em;
+    grid-auto-rows: 30vw;
+    row-gap: 1.5em;
   }
 
 }
@@ -808,8 +827,8 @@ div.homeImage {
   .blockWrapper {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 180%;
-    row-gap: 10em;
+    grid-auto-rows: 80vw;
+    row-gap: 2em;
   }
 
 }
@@ -983,10 +1002,130 @@ cursor: help;
 .blogWidgetDiv > div  {
   padding: 1.5em;
   border-radius: 25px;
-  width: 10%;
+  width: 10vw;
   margin: 0 auto;
   display: inline-block;
 }
 
+.projDesc {
+  font-size: 0.85em;
+  color: #357068;
+}
 
+/* Project block text styles */
+/* Tablets -- Landscape*/
+@media (min-width: 768px) and (max-width: 1415px)  {
+  .projBlock {
+    width: 90%;
+  }
+
+  .projTitle {
+    font-size: 16px;
+  }
+
+  .projTech {
+    font-size: 12px; 
+  }
+
+  .projDesc {
+    font-size: 0.75em;
+  }
+}
+
+/* Tablets -- Portrait */
+@media (min-width: 750px) and (max-width: 1415px) and (orientation: portrait) {
+  .projDesc {
+    display: none;
+  }
+
+  .projTitle {
+    font-size: 16px;
+  }
+}
+
+/* Phones */
+@media (max-width: 750px) and (orientation: portrait) {
+  .projBlock {
+    width: 90%;
+  }
+
+  .projTitle {
+    font-size: 18px;
+  }
+
+  .projTech {
+    font-size: 12px; 
+  }
+
+  .projDesc {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) and (orientation: landscape) {
+  .projBlock {
+    width: 90%;
+  }
+
+  .projTitle {
+    font-size: 18px;
+  }
+
+  .projTech {
+    font-size: 12px; 
+  }
+
+  .projDesc {
+    display: none;
+  }
+  
+}
+
+@media (min-width: 810px) and (max-width: 830px) and (orientation: landscape) {
+  .projBlock {
+    width: 90%;
+  }
+
+  .projTitle {
+    font-size: 18px;
+  }
+
+  .projTech {
+    font-size: 12px; 
+  }
+
+  .projDesc {
+    display: none;
+  }
+  
+}
+
+/* Blog styles */
+.block {
+  height: 75%;
+}
+
+/* Phones */
+@media (max-width: 740px)  {
+  .block {
+    height: 100%;
+  }
+
+  .blogWidgetDiv > div  {
+    width: 30vw;
+  }
+}
+
+/* Tablets */
+@media (min-width: 750px) and (max-width: 1415px) and (orientation: portrait) {
+  .blogWidgetDiv > div  {
+    width: 20vw;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1415px) and (orientation: landscape) {
+  .blogWidgetDiv > div  {
+    width: 15vw;
+  }
+}
 

@@ -40,7 +40,6 @@ export default function BlogBlock() {
                 padding: `0.5rem`,
                 fontSize: `20px`,
                 border: `1px solid`,
-                height: `60%`,
                 borderRadius: `15px`,
                 backgroundColor: `#ffffff`,
                 color: `#2dc492`,
@@ -52,21 +51,12 @@ export default function BlogBlock() {
                     <img width= "100%" height="100%" src={`https://cdn-images-1.medium.com/max/400/${post.node.virtuals.previewImage.imageId}`}/>
                 </div>  */}
                 
-                <div style= {{ marginLeft: `2px`, width: `100%`, height: `100%`, position: `absolute`, bottom: `0`, paddingTop: `0.75em`}}>
+                <div className="blogText" style= {{ marginLeft: `2px`, width: `100%`, height: `100%`, position: `absolute`, bottom: `0`, paddingTop: `0.75em`, paddingRight: `0.5em`}}>
                     <Link to={post.fields.slug}>
-                        <div data-cy="project-title" style= {{ fontWeight: `bold`, fontSize: `24px`, color: `#357068`}}> {post.frontmatter.title} </div>
+                        <div className="blogTitle" data-cy="project-title" style= {{ fontWeight: `bold`, fontSize: `24px`, color: `#357068`}}> {post.frontmatter.title} </div>
                     </Link>
                     <small>{post.frontmatter.date} <span style={{ fontSize: `20px` }}>&middot;</span>  {post.timeToRead} min read</small>
-                    <p style= {{ fontSize: `0.85em`, color: `#357068`, padding: `0 1em 0 0`}}>{post.excerpt}</p>                    
-                    
-                    {/* <Link data-cy="external-link"
-                        style={{ textDecoration: "none", fontFamily: `Roboto Condensed`, fontSize: `16px`, color: `#357068` }}
-                        to={`/`}
-                        >
-                            <div style= {{ width: `5%`, height: `5%`}}>
-                                <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-black.png" alt="DevTO Icon" />
-                            </div>
-                    </Link> */}
+                    <p className="blogDesc" style= {{ fontSize: `0.85em`, color: `#357068`, padding: `0 1em 0 0`}}>{post.excerpt}</p>                    
 
                 </div>
                 

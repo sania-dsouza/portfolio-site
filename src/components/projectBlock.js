@@ -40,7 +40,6 @@ export default function ProjectBlock() {
                 margin: `auto`,
                 fontFamily: `Roboto Condensed`,
                 border: `1px solid`,
-                width: `70%`,
                 height: `100%`,
                 borderRadius: `25px`,
                 backgroundColor: `#ffffff`,
@@ -52,11 +51,11 @@ export default function ProjectBlock() {
                   <Img style={{ width: `100%`, height: `100%`, borderRadius: `25px 0 0 25px` }} imgStyle= {{ objectFit: `cover` }} fluid={ repo.frontmatter.featuredImage.childImageSharp.fluid } />
                 </div>
 
-                <div style={{ width: `46%`, float: `right`, margin: `0.25rem`}}>
-                  <div data-cy="project-title" style= {{ fontWeight: `bold`, fontSize: `24px`, color: `#357068`, paddingTop: `0.5em` }}> <a href={ repo.frontmatter.link } style= {{ color: `#357068`}}> { repo.frontmatter.title } </a> </div>
-                  <div data-cy="project-tech" style= {{ fontWeight: `bold`, fontSize: `16px` }}> <span style={{ fontSize: `20px` }}>&middot;</span> { repo.frontmatter.tech } </div>
+                <div className="projText">
+                  <div className="projTitle"> <a href={ repo.frontmatter.link } style= {{ color: `#357068`}}> { repo.frontmatter.title } </a> </div>
+                  <div className="projTech"> <span style={{ fontSize: `20px` }}>&middot;</span> { repo.frontmatter.tech } </div>
                   
-                  <div data-cy="project-description" style= {{ fontSize: `0.85em`, color: `#357068` }}> { repo.excerpt } </div>
+                  <div className="projDesc"> { repo.excerpt } </div>
                   
                   <div data-cy="project-indiv-link" style = {{ position: `absolute`, bottom: `0`, fontSize: `0.85em`, fontWeight: `bold`, width: `100%`}}> 
                       <div className= "siteLink"> <a href={ repo.frontmatter.link } style= {{ color: `#357068`}}><p>Go to project <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></p></a></div>
