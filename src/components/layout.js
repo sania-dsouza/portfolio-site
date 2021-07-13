@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
       <div className="site"
         style={{
           margin: `0 auto`,
-          backgroundColor: `#2dc492`,
+          backgroundColor: `#ffffff`,
         }}
       >
       <Header></Header>

@@ -8,7 +8,7 @@ html {
   height: 100%;
   box-sizing: border-box;
   overflow-y: scroll;
-  background-color: #2dc492;
+  background-color: #edf7f4;
   overscroll-behavior-y: none;
   height: 100%;
 }
@@ -633,19 +633,20 @@ div.homeImage {
   height: 100%;
 }
 
-.block {
-  box-shadow: 0 0 10px #357068;
-}
-
 .projBlock {
-  box-shadow: 0 0 10px #357068;
+  box-shadow: 0 5px 5px #357068;
   width: 70%;
 }
 
+.projBlock:hover {
+  opacity: 0.6;
+}
+
 .projText {
-  width: 46%;
+  width: 70%;
   float: right;
   margin: 0.25rem;
+  color: black;
 }
 
 .projTitle {
@@ -662,17 +663,20 @@ div.homeImage {
 
 .projBlockWrapper {
   display: grid;
-  overflow: hidden;
-  grid-auto-rows: 20vw;
-  row-gap: 2em;
-  margin: 1em auto 2em auto;
+  row-gap: 1rem;
+  margin: 0.5rem auto 2rem;
+  cursor: pointer;
 }
 
 .blockWrapper {
+  margin: 1rem;
+  padding: 0.5rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 32vh;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1.5rem;
+  column-gap: 0.5em;
 }
+
 
 .projImage {
   width: 52%;
@@ -781,7 +785,18 @@ div.homeImage {
   For viewports other than laptops */
 
 /* tablets */
-@media (min-width: 750px) and (max-width: 1115px) and (orientation: landscape) {   
+@media (min-width: 750px) and (max-width: 1115px)  {   
+
+  .projBlockWrapper {
+    width: 98%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 25vw;
+    row-gap: 2em;
+  }
+
+}
+
+@media (min-width: 750px) and (max-width: 1115px)  {   
 
   .projBlockWrapper {
     width: 98%;
@@ -792,45 +807,37 @@ div.homeImage {
 
   .blockWrapper {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 35vw;
-    row-gap: 1em;
-  }
-
-}
-
-@media (min-width: 750px) and (max-width: 1115px) and (orientation: portrait) {   
-
-  .projBlockWrapper {
-    width: 98%;
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 25vw;
-    row-gap: 2em;
-  }
-
-  .blockWrapper {
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 30vw;
-    row-gap: 1.5em;
+    grid-auto-rows: auto;
+    row-gap: 3em;
   }
 
 }
 
 /* phones */
-@media (max-width: 740px) {
+@media (max-width: 740px) and (orientation: portrait){
   .projBlockWrapper {
     width: 98%;
     grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 60vw;
+    grid-auto-rows: 45vw;
     row-gap: 2em;
   }
 
   .blockWrapper {
-    width: 100%;
+    width: 92%;
     grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 80vw;
+    grid-auto-rows: auto;
     row-gap: 2em;
   }
 
+}
+
+@media (max-width: 740px) and (orientation: landscape){
+  .blockWrapper {
+    width: 95%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    row-gap: 2em;
+  }
 }
 
 /* 404 page */
@@ -985,7 +992,7 @@ cursor: help;
 }
 
 .about-text {
-  color: white;
+  color: #2dc492;
   padding: 0 0 0.75rem 0;
   font-size: 1em;
   font-weight: bold;
@@ -1013,8 +1020,8 @@ cursor: help;
 }
 
 /* Project block text styles */
-/* Tablets -- Landscape*/
-@media (min-width: 768px) and (max-width: 1415px)  {
+/* Tablets */
+@media (min-width: 750px) and (max-width: 1415px)  {
   .projBlock {
     width: 90%;
   }
@@ -1034,9 +1041,6 @@ cursor: help;
 
 /* Tablets -- Portrait */
 @media (min-width: 750px) and (max-width: 1415px) and (orientation: portrait) {
-  .projDesc {
-    display: none;
-  }
 
   .projTitle {
     font-size: 16px;
@@ -1046,6 +1050,15 @@ cursor: help;
 /* Phones */
 @media (max-width: 750px) and (orientation: portrait) {
   .projBlock {
+    width: 90%;
+  }
+
+  .projImage {
+    display: none;
+    width: 0%;
+  }
+  
+  .projText {
     width: 90%;
   }
 
@@ -1065,6 +1078,15 @@ cursor: help;
 @media (max-width: 750px) and (orientation: landscape) {
   .projBlock {
     width: 90%;
+    height: 50%;
+  }
+  .projText {
+    width: 90%;
+  }
+
+  .projImage {
+    display: none;
+    width: 0%;
   }
 
   .projTitle {
@@ -1075,10 +1097,6 @@ cursor: help;
     font-size: 12px; 
   }
 
-  .projDesc {
-    display: none;
-  }
-  
 }
 
 @media (min-width: 810px) and (max-width: 830px) and (orientation: landscape) {
@@ -1102,7 +1120,14 @@ cursor: help;
 
 /* Blog styles */
 .block {
-  height: 75%;
+  box-shadow: 0 5px 5px #6f37a3;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.block:hover {
+  opacity: 0.6;
 }
 
 /* Phones */
@@ -1136,4 +1161,230 @@ cursor: help;
     .blogPost {
       width: 95%;
     }
+  }
+
+  /* Home styles */
+  .bioWrapper {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 3rem 1rem  4rem;
+    overflow: hidden;
+    background-image: url("../images/bio-bg.png");
+    background-repeat:repeat-x;
+    background-color: #ECECEC;
+    box-shadow: 0 0 30px #ECECEC;
+  }
+
+  .bioImage {
+    width: 45%;
+    float: left;
+  }
+
+  .bioDesc {
+    width: 55%;
+    float: right;
+    padding: 1rem;
+  }
+
+  .bioButton {
+    width: 20%;
+    margin: 0.85rem;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  #projectsButton {
+    background-color: #2dc492;
+  }
+
+  #blogButton {
+    background-color: #6f37a3;
+  }
+
+  #resumeButton {
+    background-color: #fca030;
+  }
+
+  #email {
+    background-color: hotpink;
+  }
+
+  #linkedin { 
+    background-color: indianred;
+  }
+
+  /* Home -- Mobile styles */
+  @media (max-width: 740px)
+  {
+    .bioWrapper {
+      width: 100%;
+      padding: 1rem 2rem;
+      text-align: center;
+      overflow: hidden;
+    }
+  
+    .bioImage {
+      width: 100%;
+    }
+  
+    .bioDesc {
+      width: 100%;
+      
+    }
+  }
+
+  /* Home -- Tablet styles */
+  @media (min-width: 750px) and (max-width: 1415px) and (orientation: portrait) 
+  {
+    .bioWrapper {
+      width: 100%;
+      padding: 1rem 1rem;
+      text-align: center;
+      overflow: hidden;
+    }
+  
+    .bioImage {
+      width: 100%;
+    }
+  
+    .bioDesc {
+      width: 100%;
+      
+    }
+  }
+
+  @media (min-width: 750px) and (max-width: 1415px) and (orientation: landscape) 
+  {
+    .bioWrapper {
+      width: 100%;
+      padding: 1rem 1rem;
+      text-align: center;
+      overflow: hidden;
+    }
+  
+    .bioImage {
+      width: 50%;
+      margin: 1rem 0 ;
+    }
+  
+    .bioDesc {
+      width: 50%;
+    }
+  }
+
+  .blogImage {
+    width: 50%;
+    height: 50%;
+    text-align: center;
+  }
+
+  /* Quicklook Div styles */
+  .quicklookDiv {
+    width: 100%;
+    height: 22rem;
+    padding: 1rem 4rem;
+  }
+
+  .qlBlockDiv {
+    display: flex;
+  }
+
+  .quicklookBlockProject, .quicklookBlockBlog {
+    width: 30%;
+    border-top: 1px solid black;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 0 1rem;
+    border-top-width: 0.25rem;
+  }
+
+  .quicklookBlockProject {
+    border-top-color: #2dc492;
+    height: 50%;
+    box-shadow: 0 0 10px #2dc492;
+  }
+
+  .quicklookBlockBlog {
+    border-top-color: #6f37a3;
+    background-color: white;
+    height: auto;
+    box-shadow: 0 0 10px #6f37a3;
+  }
+
+  .seemore {
+    float: right;
+    padding: 1rem 2rem;
+    color: black;
+  }
+
+
+  #qlblock2 {
+    background-color: #ECECEC;
+  }
+
+  /* Quicklook -- Mobile styles */
+  @media (max-width: 740px) {
+    .quicklookDiv {
+      height: auto;
+      padding: 1rem;
+    }
+
+    .qlBlockDiv {
+      display: block;
+    }
+
+    .quicklookBlockProject, .quicklookBlockBlog {
+      width: 90%;    
+      margin: 1rem;
+    }
+
+    .seemore {
+      float: none;
+      padding: 0.5rem 1rem 0;
+    }
+  }
+
+  /* Quicklook -- Tablet styles */
+  @media (min-width: 750px) and (max-width: 1415px) and (orientation: portrait) {
+    .quicklookDiv {
+      height: auto;
+      padding: 1rem;
+    }
+
+    .quicklookBlockProject, .quicklookBlockBlog {
+      width: 90%;    
+      margin: 1rem;
+    }
+
+    .seemore {
+      float: none;
+      padding: 0.5rem 1rem 0;
+    }
+  }
+  
+  @media (min-width: 750px) and (max-width: 1415px) and (orientation: landscape) {
+    .quicklookDiv {
+      height: auto;
+      padding: 1rem;
+    }
+
+
+    .quicklookBlockProject, .quicklookBlockBlog {
+      width: 90%;    
+      margin: 1rem;
+    }
+
+    .seemore {
+      float: none;
+      padding: 0.5rem 1rem 0;
+    }
+  }
+
+/* Project -- Styles */
+
+  .projectImage {
+    width: 100%;
+    height: 100%;
+    text-align: center;
   }

@@ -26,7 +26,7 @@ export default function MenuIcons() {
             <NavItem to = "/projects"><FontAwesomeIcon icon={faFileCode} className="icon" size="3x" title="Projects"/> </NavItem>
             <NavItem to = "/blog"><FontAwesomeIcon icon={faBookmark} className="icon" size="3x" title="Blog"/> </NavItem>
             <NavItem to = "/gallery"><FontAwesomeIcon icon={faCamera} className="icon" size="3x" title="Gallery"/> </NavItem>
-            <NavItem to = "https://drive.google.com/file/d/1fQuZUfnP_i9tRplF8Vfj3jDBx-3KZfr1/view?usp=sharing"><FontAwesomeIcon icon={faBriefcase} className="icon" size="3x" title="Resume"/> </NavItem>
+            <NavItem to = "https://drive.google.com/file/d/1fQuZUfnP_i9tRplF8Vfj3jDBx-3KZfr1/view?usp=sharing"><FontAwesomeIcon icon={faBriefcase} className="icon" size="3x" title="Resume"/> </NavItem> 
 
             {/* <a href="file:///Users/saniadsouza/Personal_Projects/personal_site/personal_site/src/resources/resume.pdf" download="resume" style={{ paddingRight: `5rem`, color: `#357068` }}><FontAwesomeIcon icon={faBriefcase} className="icon" size="3x" title="Download my resume"/></a> */}
             {/* <a href="/pot-pourri" style={{ paddingRight: `5rem`, color: `#357068` }}><FontAwesomeIcon icon={faLeaf} className="icon" size="3x" title="Pot Pourri"/></a> */}

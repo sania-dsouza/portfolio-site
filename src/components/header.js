@@ -7,7 +7,7 @@
   const Navigation = styled.nav`
     height: 10vh;
     display: flex;
-    background-color: #2dc492;
+    background-color: #ffffff;
     z-index: 2;
 
     @media (max-width: 740px) {
@@ -90,7 +90,7 @@
 
         <header className= "header"
           style={{
-            background: `#2dc492`,
+            background: `#ffffff`,
             paddingTop: `1rem`
           }}
         >
@@ -105,7 +105,7 @@
             <Link
               to="/"
               style={{
-                color: `white`,
+                color: `#2dc492`,
                 textDecoration: `none`,
               }}
               class="navbar-brand"
@@ -113,12 +113,12 @@
               <Logo> </Logo>
             </Link>
               
-            <div className="about-text">
+            {/* <div className="about-text">
               Software developer. <br/> Focused on building 
               light and usable websites.
-            </div>
+            </div> */}
 
-            <Navigation>
+            {/* <Navigation>
 
             
               <Toggle
@@ -137,13 +137,13 @@
               <Navbox open>
                 <MenuIcons/>
               </Navbox>
-            )}
+            )} */}
               
             
             {/* add the logos for actions  */}
-            {/* <MenuIcons></MenuIcons> */}
+            {/* <MenuIcons></MenuIcons>
         
-          </Navigation>
+          </Navigation> */}
           </div>
         </header>
       

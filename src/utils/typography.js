@@ -2,7 +2,7 @@ import Typography from "typography";
 import judahTheme from 'typography-theme-judah'
 
 judahTheme.headerColor = '#ffffff';
-judahTheme.baseFontSize = '20px';
+judahTheme.baseFontSize = '22px';
 judahTheme.headerWeight = '700';
 
 const typography = new Typography(judahTheme);

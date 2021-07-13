@@ -14,9 +14,9 @@ const ProjectsPage = () => (
     </Helmet>
     <SEO title="Projects" />
     
-    <div style= {{ textAlign: `center`, marginTop: `1rem`, padding: `auto`, color: `white`, fontFamily: 'Vollkorn', fontWeight: `bold`, fontSize: `32px`}}>
+    {/* <div style= {{ textAlign: `center`, marginTop: `1rem`, padding: `auto`, color: `white`, fontFamily: 'Vollkorn', fontWeight: `bold`, fontSize: `32px`}}>
       <div>Projects</div>
-    </div>
+    </div> */}
     
     {/* for the projects/blog posts that need to be displayed */}
     <div className= "projBlockWrapper">
