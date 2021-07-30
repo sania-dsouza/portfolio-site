@@ -628,60 +628,19 @@ pre tt:after {
   border-color: #ffd100;
 }
 
-div.homeImage {
-  width:100%;
-  height: 100%;
-}
-
-.projBlock {
-  box-shadow: 0 5px 5px #357068;
-  width: 70%;
-}
-
-.projBlock:hover {
-  opacity: 0.6;
-}
-
-.projText {
-  width: 70%;
-  float: right;
-  margin: 0.25rem;
-  color: black;
-}
-
-.projTitle {
-  font-weight: bold; 
-  font-size: 24px;
-  color: #357068;
-  padding-top: 0.5em;
-}
-
-.projTech {
-  font-weight: bold;
-  font-size: 16px; 
-}
-
 .projBlockWrapper {
   display: grid;
-  row-gap: 1rem;
-  margin: 0.5rem auto 2rem;
-  cursor: pointer;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1.5rem;
+  margin: 0.5rem 1rem 2rem;
 }
 
 .blockWrapper {
   margin: 1rem;
   padding: 0.5rem;
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
+  display: grid;
   row-gap: 1.5rem;
-  column-gap: 0.5em;
-}
-
-
-.projImage {
-  width: 52%;
-  height: 100%;
-  position: absolute;
 }
 
 .site {
@@ -695,114 +654,20 @@ div.homeImage {
   height: 100%;
 }
 
-.pin-text {
-  border-radius: 15px;
-  padding: 5px 0 0;
-  color: black;
-  background: rgba(255, 255, 255, 0.6);
-}
-
-.box {
-  width:8%;
-  height:8%;
-  background-image: url(http://www.clker.com/cliparts/d/I/4/7/X/8/location-button-th.png);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 24px;
-}
-
-#pin-1 {
-  top: 45%;
-  left: 22%;
-  position: absolute; 
-}
-
-#pin-2 {
-  top:65%;
-  left:45%;
-  position: absolute;
-}
-
-#pin-3 {
-  top:60%;
-  left:86%;
-  position: absolute;
-}
-
-.box:hover > .pin-text {
-  display: block;
-}
-
-.pin-text {
-  position: absolute;
-  width: 350%;
-  transform:translateY(-90%) translateX(-80%);  
-  left:75%;
-  display: none;
-}
-
-.fa-snowflake, .fa-calendar, .fa-utensils, .fa-heart, 
-.fa-home, .fa-umbrella-beach, .fa-temperature-high, .fa-magic, .fa-wind, .fa-futbol, .fa-plane, .fa-baby-carriage {
-  color: #357068;
-}
-
-.sc-bdfBwQ:hover {
-  color: #357068;
-}
-
-
-/* laptops */
-@media (min-width: 1070px) {   
-  .menuIcons  {
-    margin-left: 18%;
-  }
-}
-
-/* Tablets -- Landscape*/
-@media (min-width: 768px) and (max-width: 1115px) and (orientation: landscape) {
-  .menuIcons {
-    margin-left: 20vh;
-  }
-}
-
-/* Tablets -- Portrait */
-@media (min-width: 750px) and (max-width: 1115px) and (orientation: portrait) {
-  .menuIcons {
-    margin-left: 12vh;
-    font-size: 16px;
-  }
-}
-
-/* Phones */
-@media (max-width: 740px) and (orientation: portrait) {
-  .home-image {
-    height: 100%;
-    width: auto;
-  }
-}
 
 /* Project block wrapper, blog block wrapper, gallery wrapper 
   For viewports other than laptops */
 
 /* tablets */
-@media (min-width: 750px) and (max-width: 1115px)  {   
-
-  .projBlockWrapper {
-    width: 98%;
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 25vw;
-    row-gap: 2em;
-  }
-
-}
 
 @media (min-width: 750px) and (max-width: 1115px)  {   
 
   .projBlockWrapper {
-    width: 98%;
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 25vw;
+    width: 95%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
     row-gap: 2em;
+    overflow: hidden;
   }
 
   .blockWrapper {
@@ -816,7 +681,7 @@ div.homeImage {
 /* phones */
 @media (max-width: 740px) and (orientation: portrait){
   .projBlockWrapper {
-    width: 98%;
+    width: 92%;
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: 45vw;
     row-gap: 2em;
@@ -826,7 +691,7 @@ div.homeImage {
     width: 92%;
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: auto;
-    row-gap: 2em;
+    row-gap: 1em;
   }
 
 }
@@ -836,7 +701,7 @@ div.homeImage {
     width: 95%;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
-    row-gap: 2em;
+    row-gap: 1em;
   }
 }
 
@@ -876,283 +741,6 @@ div.homeImage {
     }
 }
 
-/* Blog */
-@media screen and (max-width: 740px) {
-  div[data-cy="blog-subtitle"]{
-    font-size: 16px;
-  }
-}
-
-/* Gallery styles */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 20vw;
-  grid-gap: .5em;
-}
-
-.gallery > * {
-  box-shadow: 0 2px 8px 0  #357068;
-}
-
-.gallery_image_overlay {
-text-align: center;
-padding-top: 30%;
-opacity: 0;
-color:black;
-background-color: rgba(255, 255, 255, 0.7);
-cursor: help;
-}
-
-.gallery_image_overlay:hover {
-  opacity: 1;
-}
-
-/* tablets */
-@media (min-width: 750px) and (max-width: 1115px) {   
-.gallery {
-  grid-template-columns: repeat(1, 1fr);
-  grid-auto-rows: 50vw;
-  grid-gap: .5em;
-}
-}
-
-/* phones */
-@media (max-width: 740px) {
-.gallery {
-  grid-template-columns: repeat(1, 1fr);
-  grid-auto-rows: 120vw;
-  grid-gap: 1em;
-  }
-  } 
-
-/* Home page styles */
- 
-/* phones */
- @media screen and (max-width: 740px) {
-
-  .home-image {
-    margin-top: 12vh;
-    height: 100%;
-    width: 120%;
-  }
-
-  .box {
-    width:7%;
-    height:7%;
-  }
-
-  #pin-1 {
-    top: 40%;
-    left: 25%;
-  }
-
-  #pin-2 {
-    top: 47%;
-    left: 55%;
-  }
-
-  #pin-3 {
-    top: 42%;
-    left: 85%;
-  }
-
-  .pin-text {
-    position: absolute;
-    width: 500%;
-    transform:translateY(-10%) translateX(-70%);  
-    display: none;
-  }
-}
-
-/* Tablets */
-@media screen and (min-width: 750px) and (max-width: 1115px) and (orientation: portrait) {
-
-  .home-image {
-    margin-top: 12vh;
-    height: 100%;
-    width: 120%;
-  }
-
-  #pin-2 {
-    top: 50%;
-    left: 50%;
-  }
-
-}
-
-@media screen and (min-width: 750px) and (max-width: 1115px) and (orientation: landscape) {
-  
-  .home-image {
-    margin-top: 12vh;
-    height: 100%;
-    width: 120%;
-  }
-
-}
-
-.about-text {
-  color: #2dc492;
-  padding: 0 0 0.75rem 0;
-  font-size: 1em;
-  font-weight: bold;
-}
-
-.blogPost {
-  background-color: white;
-  height: 100%;
-  width: 80%;
-  padding: 1em;
-  margin : 3em auto;
-}
-
-.blogWidgetDiv > div  {
-  padding: 1.5em;
-  border-radius: 25px;
-  width: 10vw;
-  margin: 0 auto;
-  display: inline-block;
-}
-
-.projDesc {
-  font-size: 0.85em;
-  color: #357068;
-}
-
-/* Project block text styles */
-/* Tablets */
-@media (min-width: 750px) and (max-width: 1415px)  {
-  .projBlock {
-    width: 90%;
-  }
-
-  .projTitle {
-    font-size: 16px;
-  }
-
-  .projTech {
-    font-size: 12px; 
-  }
-
-  .projDesc {
-    font-size: 0.75em;
-  }
-}
-
-/* Tablets -- Portrait */
-@media (min-width: 750px) and (max-width: 1415px) and (orientation: portrait) {
-
-  .projTitle {
-    font-size: 16px;
-  }
-}
-
-/* Phones */
-@media (max-width: 750px) and (orientation: portrait) {
-  .projBlock {
-    width: 90%;
-  }
-
-  .projImage {
-    display: none;
-    width: 0%;
-  }
-  
-  .projText {
-    width: 90%;
-  }
-
-  .projTitle {
-    font-size: 18px;
-  }
-
-  .projTech {
-    font-size: 12px; 
-  }
-
-  .projDesc {
-    display: none;
-  }
-}
-
-@media (max-width: 750px) and (orientation: landscape) {
-  .projBlock {
-    width: 90%;
-    height: 50%;
-  }
-  .projText {
-    width: 90%;
-  }
-
-  .projImage {
-    display: none;
-    width: 0%;
-  }
-
-  .projTitle {
-    font-size: 18px;
-  }
-
-  .projTech {
-    font-size: 12px; 
-  }
-
-}
-
-@media (min-width: 810px) and (max-width: 830px) and (orientation: landscape) {
-  .projBlock {
-    width: 90%;
-  }
-
-  .projTitle {
-    font-size: 18px;
-  }
-
-  .projTech {
-    font-size: 12px; 
-  }
-
-  .projDesc {
-    display: none;
-  }
-  
-}
-
-/* Blog styles */
-.block {
-  box-shadow: 0 5px 5px #6f37a3;
-  padding: 1rem;
-  cursor: pointer;
-  border-radius: 20px;
-}
-
-.block:hover {
-  opacity: 0.6;
-}
-
-/* Phones */
-@media (max-width: 740px)  {
-  .block {
-    height: 100%;
-  }
-
-  .blogWidgetDiv > div  {
-    width: 30vw;
-  }
-}
-
-/* Tablets */
-@media (min-width: 750px) and (max-width: 1415px) and (orientation: portrait) {
-  .blogWidgetDiv > div  {
-    width: 20vw;
-  }
-}
-
-@media (min-width: 750px) and (max-width: 1415px) and (orientation: landscape) {
-  .blogWidgetDiv > div  {
-    width: 15vw;
-  }
-}
 
 /* Blog post styles */
 /* phones */
@@ -1187,11 +775,15 @@ cursor: help;
   }
 
   .bioButton {
-    width: 20%;
+    width: 35%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000000;
+    border: none;
     margin: 0.85rem;
     font-size: 1rem;
     color: white;
     cursor: pointer;
+    padding: 0.5em;
   }
 
   #projectsButton {
@@ -1274,35 +866,65 @@ cursor: help;
   }
 
   .blogImage {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 60%;
     text-align: center;
+  }
+
+  .blogText {
+    padding: 0.5rem;
   }
 
   /* Quicklook Div styles */
   .quicklookDiv {
     width: 100%;
-    height: 22rem;
+    height: auto;
     padding: 1rem 4rem;
+    box-shadow: 0 0 10px #ECECEC;
   }
 
   .qlBlockDiv {
     display: flex;
   }
 
-  .quicklookBlockProject, .quicklookBlockBlog {
-    width: 30%;
+  .quicklookBlockProject, .quicklookBlockBlog, .quicklookBlockProjectPage {
+    width: 90%;
     border-top: 1px solid black;
     border-radius: 20px;
-    padding: 1rem;
+    padding: 0;
     margin: 0 1rem;
     border-top-width: 0.25rem;
+    height: 50%;
   }
 
   .quicklookBlockProject {
     border-top-color: #2dc492;
-    height: 50%;
+    height: auto;
     box-shadow: 0 0 10px #2dc492;
+  }
+
+  .quicklookBlockProjectPage {
+    border-top-color: #2dc492;
+    height: auto;
+    box-shadow: 0 0 10px #2dc492;
+  }
+
+  .quicklookBlockProject .projectImage {
+    height: 60%;
+  }
+
+  .quicklookBlockProjectPage  .projectImage {
+    height: 60%;
+  }
+
+  .quicklookBlockProjectPage .qlProjectText .projectTitle {
+    color: #2dc492;
+  }
+
+  .qlProjectText {
+    padding: 1rem;
+    text-align: center;
+    height: auto;
   }
 
   .quicklookBlockBlog {
@@ -1313,7 +935,8 @@ cursor: help;
   }
 
   .seemore {
-    float: right;
+    /* float: right; */
+    text-align: right;
     padding: 1rem 2rem;
     color: black;
   }
@@ -1324,19 +947,91 @@ cursor: help;
   }
 
   /* Quicklook -- Mobile styles */
-  @media (max-width: 740px) {
+  @media (max-width: 740px) and (orientation: portrait) {
     .quicklookDiv {
-      height: auto;
       padding: 1rem;
     }
 
     .qlBlockDiv {
       display: block;
+      overflow:hidden;
     }
 
     .quicklookBlockProject, .quicklookBlockBlog {
       width: 90%;    
-      margin: 1rem;
+      margin: 1rem 1rem 2rem 1rem;
+    }
+
+    .quicklookBlockProjectPage {
+        height: auto;
+        border-radius: 25px;
+    }
+
+    .quicklookBlockProjectPage .projectTitle {
+      font-size: 1rem;
+    }
+
+    .quicklookBlockProjectPage .qlProjectText {
+      position: relative;
+      top: -50%;
+      color: white;
+    }
+
+    .quicklookBlockProjectPage .qlProjectText .projectTitle {
+      color: white;
+    }
+
+    .seemore {
+      float: none;
+      padding: 0.5rem 1rem 0;
+    }
+  }
+
+  @media (max-width: 740px) and (orientation: landscape) {
+    .projBlockWrapper {
+      width: 92%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 33vw;
+      row-gap: 1em;
+    }
+
+    .quicklookDiv {
+      padding: 1rem;
+    }
+
+    .qlBlockDiv {
+      display: block;
+      overflow:hidden;
+    }
+
+    .quicklookBlockProject, .quicklookBlockBlog {
+      width: 90%;    
+      margin: 1rem 1rem 2rem 1rem;
+    }
+
+    .quicklookBlockProjectPage {
+        height: auto;
+        border-radius: 25px;
+    }
+
+    .quicklookBlockProjectPage .projectImage {
+        display: none;
+    }
+
+    .quicklookBlockProjectPage .projectTitle {
+      font-size: 1rem;
+    }
+
+    .quicklookBlockProjectPage .qlProjectText .projectTitle {
+      color: #2dc492;
+    }
+
+    .quicklookBlockBlog .blogTitle {
+      font-size: 1rem;
+    }
+
+    .quicklookBlockBlog .blogText {
+      font-size: 0.75rem;
     }
 
     .seemore {
@@ -1352,9 +1047,34 @@ cursor: help;
       padding: 1rem;
     }
 
+    .qlBlockDiv {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .quicklookBlockProject, .quicklookBlockBlog {
       width: 90%;    
       margin: 1rem;
+    }
+
+    .quicklookBlockProject .projectImage {
+      height: 47%;
+    }
+
+    .quicklookBlockProjectPage .projectImage {
+      height: 47%;
+    }
+
+    .quicklookBlockBlog .blogImage {
+      height: auto;
+    }
+
+    .quicklookBlockBlog .blogTitle {
+      font-size: 1rem;
+    }
+
+    .quicklookBlockBlog .blogText {
+      font-size: 0.75rem;
     }
 
     .seemore {
@@ -1370,11 +1090,24 @@ cursor: help;
     }
 
 
+    .qlBlockDiv {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     .quicklookBlockProject, .quicklookBlockBlog {
       width: 90%;    
       margin: 1rem;
     }
 
+    .quicklookBlockProject .projectImage {
+      height: 47%;
+    }
+
+    .quicklookBlockBlog .blogImage {
+      height: auto;
+    }
+    
     .seemore {
       float: none;
       padding: 0.5rem 1rem 0;
@@ -1384,7 +1117,51 @@ cursor: help;
 /* Project -- Styles */
 
   .projectImage {
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 200%;
     text-align: center;
   }
+
+  .post-hero {
+    height: 25em;
+    width: 100%;
+  }
+
+  .post-wrapper {
+    padding: 1rem 1rem;
+  }
+
+  .section-headline {
+    font-weight: bolder;
+  }
+
+.tag {
+  border-radius: 5px;
+  width: auto;
+  padding: 2px;
+  margin: 0px 20px 0px 0px;
+}
+
+#NLP {
+  color: green;
+  background-color: lightgreen;
+  border: 2px solid green;
+}
+
+#general {
+  color: purple;
+  background-color: pink;
+  border: 2px solid purple;
+}
+
+#javascript {
+  color: orange;
+  background-color: yellow;
+  border: 2px solid orange;
+}
+
+.post-div {
+  width: 90%;
+  margin: 0 auto;
+}

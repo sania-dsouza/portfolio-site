@@ -2,6 +2,28 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
+const { MARKS, INLINES, BLOCKS } = require('@contentful/rich-text-types')
+
+const contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  accessToken:
+    process.env.CONTENTFUL_ACCESS_TOKEN ||
+    process.env.CONTENTFUL_DELIVERY_TOKEN,
+};
+
+if (process.env.CONTENTFUL_HOST) {
+  contentfulConfig.host = process.env.CONTENTFUL_HOST;
+  contentfulConfig.accessToken = process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN;
+}
+
+const { spaceId, accessToken } = contentfulConfig;
+
+if (!spaceId || !accessToken) {
+  throw new Error(
+    "Contentful spaceId and the access token need to be provided."
+  );
+}
+
 const { githubApiQuery } = require('./github-api')   // import the API query created 
 
 module.exports = {
@@ -103,7 +125,35 @@ module.exports = {
           showSpinner: true,
         },
       },
-
+      {
+        resolve: `gatsby-source-contentful`,
+        options: contentfulConfig,
+      },
+      
+      {   
+        resolve: `@contentful/gatsby-transformer-contentful-richtext`,
+        options: {
+          renderOptions: {
+            /*
+            * Defines custom html string for each node type like heading, embedded entries etc..
+            */
+            renderNode: {
+              // Example
+              [BLOCKS.EMBEDDED_ASSET]: node => {
+                let { description, file } = node.data.target.fields
+                //console.log(file["en-US"].url.substring(2,))
+                //console.log(node.data.target.fields)
+                let imageUrl = "https://"+file["en-US"].url.substring(2,);
+                return `<img src=${imageUrl} alt=${description['en-US']} />`
+              },
+              [INLINES.EMBEDDED_ENTRY]: node => {
+                //console.log(node.data.target.fields)
+                return `<a href=${node.data.target.fields.slug['en-US']} class='custom-entry'> ${node.data.target.fields.title['en-US']} </a>`
+              },
+            }
+          }
+        }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

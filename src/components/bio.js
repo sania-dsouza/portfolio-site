@@ -21,7 +21,7 @@ export default function Bio() {
                     <button className="bioButton" id="blogButton"> Blog </button>
                 </Link>
                 
-                <Link to="/">
+                {/* <Link to="/">
                     <button className="bioButton" id="resumeButton"> Resume </button>
                 </Link>
             
@@ -31,7 +31,7 @@ export default function Bio() {
                 
                 <Link to="https://ca.linkedin.com/in/saniadsouza">
                     <button className="bioButton" id="linkedin"> Linkedin </button>
-                </Link>
+                </Link> */}
             </div>
         </div>
     )

@@ -1,54 +1,66 @@
-const { createFilePath } = require(`gatsby-source-filesystem`)
-const path = require(`path`)
+const Promise = require('bluebird')
+const path = require('path')
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
 
-  if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
-    const collection = getNode(node.parent).sourceInstanceName;
-    createNodeField({
-      node,
-      name: 'collection',
-      value: collection,
-    });
-    // get parent node
-    //const parent = getNode(_.get(node, "parent"));
+  return new Promise((resolve, reject) => {
+    const blogPost = path.resolve('./src/templates/blog-post.js')
+    const projectPost = path.resolve('./src/templates/project-post.js')
 
-    createNodeField({
-      node,
-      name: `slug`,
-      value: `/blog`+slug,
-    });
-
-  }
-}
-
-exports.createPages = async ({ graphql, actions }) => {
-    const { createPage } = actions
-    const result = await graphql(`
-      query {
-        allMarkdownRemark {
-          edges {
-            node {
-              fields {
-                slug
+    resolve(
+      graphql(
+        `
+          {
+            allContentfulBlogPost {
+              edges {
+                node {
+                  title
+                  slug
+                }
+              }
+            }
+          
+            allContentfulDataProjectPost {
+              edges {
+                node {
+                  title
+                  slug
+                }
               }
             }
           }
+        `
+      ).then(result => {
+        if (result.errors) {
+          console.log(result.errors)
+          reject(result.errors)
         }
-      }
-    `)
-  
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.fields.slug,
-        component: path.resolve(`./src/templates/blog-post.js`),
-        context: {
-          // Data passed to context is available
-          // in page queries as GraphQL variables.
-          slug: node.fields.slug,
-        },
+
+        // create blog post pages
+        const posts = result.data.allContentfulBlogPost.edges
+        posts.forEach(post => {
+          createPage({
+            path: `/blog/${post.node.slug}/`,
+            component: blogPost,
+            context: {
+              slug: post.node.slug,
+            },
+          })
+        })
+
+        // create project post pages
+        const projects = result.data.allContentfulDataProjectPost.edges
+        projects.forEach(proj => {
+          createPage({
+            path: `/project/${proj.node.slug}/`,
+            component: projectPost,
+            context: {
+              slug: proj.node.slug,
+            },
+          })
+        })
       })
-    })
-  }
+    )
+  })
+}
