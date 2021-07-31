@@ -6,7 +6,6 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Tags from "../components/tags"
 
-//import heroStyles from '../components/hero.module.css'
 
 class BlogPostTemplate extends React.Component {
   render() {
