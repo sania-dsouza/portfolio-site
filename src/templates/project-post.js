@@ -5,17 +5,23 @@ import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Tags from "../components/tags"
+import SEO from "../components/seo"
 
-
-class BlogPostTemplate extends React.Component {
+class ProjectPostTemplate extends React.Component {
   render() {
     const projPost = get(this.props, 'data.contentfulDataProjectPost')
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    //const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     return (
       <Layout location={this.props.location}>
         <div className="post-div" style={{ background: '#fff' }}>
-          <Helmet title={`${projPost.title} | ${siteTitle}`} />
+          <Helmet>
+              <title> {`${projPost.title}`} </title>
+              <meta charSet="utf-8" />
+              <description> {`${projPost.subtitle.subtitle}`} </description>
+          </Helmet> 
+          <SEO title={projPost.title} />
+          
           <div className="hero-container">
             <Img
               className="post-hero"
@@ -67,7 +73,7 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate
+export default ProjectPostTemplate
 
 export const pageQuery = graphql`
   query ProjectPostBySlug($slug: String!) {

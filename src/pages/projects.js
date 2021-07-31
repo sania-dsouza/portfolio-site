@@ -16,7 +16,7 @@ class ProjectIndex extends React.Component {
         <Helmet>
           <meta charSet="utf-8" />
           <title>Projects</title>
-          <link rel="canonical" href="http://localhost:8000/projects" />
+          <link rel="canonical" href="https://www.sania-dsouza.com/projects" />
         </Helmet>
         <SEO title="Projects" />
         

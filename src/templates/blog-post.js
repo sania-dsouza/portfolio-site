@@ -4,17 +4,24 @@ import { Helmet } from 'react-helmet'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
+import SEO from "../components/seo"
 
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-
+    // const siteTitle = get(this.props, 'site.siteMetadata.title')
+    
     return (
       <Layout location={this.props.location}>
         <div className="post-div" style={{ background: '#fff' }}>
-          <Helmet title={`${post.title} | ${siteTitle}`} />
+          <Helmet>
+            <title> {`${post.title}`} </title>
+            <meta charSet="utf-8" />
+            <description> {`${post.subtitle}`} </description>
+          </Helmet> 
+          <SEO title={post.title} />
+          
           <div>
             <Img
               className="post-hero"

@@ -31,9 +31,11 @@ module.exports = {
 
   siteMetadata: {
     title: `Sania D Souza`,
-    description: `Software developer based out of Toronto. I get things done!`,
+    description: `Software developer/writer based out of Toronto.`,
     author: `Sania`,
-    siteUrl: "https://www.sania-dsouza.com"
+    url:  `https://www.sania-dsouza.com`,
+    siteUrl: "https://www.sania-dsouza.com",
+    image: "/images/favicon.png",
   },
   
   plugins: [
@@ -82,40 +84,12 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       }
     },
-      {
-        resolve: `gatsby-source-github-api`,
-        options: {
-          url: "https://api.github.com/graphql", // default Github GraphQL v4 API endpoint
-
-          // token: required by the GitHub API
-          token: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
-
-          // GraphQLquery: defaults to a search query
-          graphQLQuery: githubApiQuery,
-
-          // variables: defaults to variables needed for a search query
-          variables: {
-            github_login: process.env.GITHUB_LOGIN
-          }
-        }
-      },
-      {
-        resolve: 'gatsby-source-medium',
-        options: {
-          username: '@sania.dsouza2012', // Medium user name
-        },
-      },
-      {
-        resolve: `gatsby-source-cloudinary`,
-        options: {
-          cloudName: process.env.CLOUDINARY_CLOUD_NAME,
-          apiKey: process.env.CLOUDINARY_API_KEY,
-          apiSecret: process.env.CLOUDINARY_API_SECRET,
-          resourceType: `image`,
-          prefix: `personal-site/`,
-          maxResults: 50
-        }
-      },
+      // {
+      //   resolve: 'gatsby-source-medium',
+      //   options: {
+      //     username: '@sania.dsouza2012', // Medium user name
+      //   },
+      // },
       {
         resolve: `gatsby-plugin-nprogress`,
         options: {
@@ -156,7 +130,7 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 
 }

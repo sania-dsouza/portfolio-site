@@ -15,7 +15,7 @@ class BlogIndex extends React.Component {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Blog</title>
-        <link rel="canonical" href="http://localhost:8000/blog" />
+        <link rel="canonical" href="https://www.sania-dsouza.com/blog" />
       </Helmet>
       <SEO title="Blog" />
       

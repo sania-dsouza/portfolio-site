@@ -19,8 +19,7 @@ class IndexPage extends React.Component {
         <Helmet>
           <meta charSet="utf-8" />
           <title>Home</title>
-          <description>Test</description>
-          <link rel="canonical" href="http://localhost:8000" />
+          <link rel="canonical" href="https://www.sania-dsouza.com" />
         </Helmet>
         <SEO title="Home" />
 
