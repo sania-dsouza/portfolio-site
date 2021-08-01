@@ -1141,24 +1141,81 @@ pre tt:after {
   width: auto;
   padding: 2px;
   margin: 0px 20px 0px 0px;
+  color: white;
+  font-weight: bold;
 }
 
 #NLP {
-  color: green;
   background-color: lightgreen;
-  border: 2px solid green;
+  border: 2px solid lightgreen;
+}
+
+#python {
+  background-color: peachpuff;
+  border: 2px solid peachpuff;
 }
 
 #general {
-  color: purple;
-  background-color: pink;
-  border: 2px solid purple;
+  background-color: grey;
+  border: 2px solid grey;
 }
 
 #javascript {
-  color: orange;
-  background-color: yellow;
-  border: 2px solid orange;
+  background-color: lightslategrey;
+  border: 2px solid lightslategrey;
+}
+
+#Keras {
+  color:grey;
+  background-color: lightcyan;
+  border: 2px solid lightcyan;
+}
+
+#TensorFlow {
+  background-color: lightgrey;
+  border: 2px solid lightgrey;
+}
+
+#Cloud {
+  background-color: lightskyblue;
+  border: 2px solid lightskyblue;
+}
+
+#AWS {
+  background-color: lightsteelblue;
+  border: 2px solid lightsteelblue;
+}
+
+#Spark {
+  color: grey;
+  background-color: palegoldenrod;
+  border: 2px solid palegoldenrod;
+}
+
+#sentiment-analysis {
+  color: white;
+  background-color: powderblue;
+  border: 2px solid powderblue;
+}
+
+#classification {
+  background-color: cadetblue;
+  border: 2px solid cadetblue;
+}
+
+#regression {
+  background-color: lightblue;
+  border: 2px solid lightblue;
+}
+
+#CNN {
+  background-color: palegreen;
+  border: 2px solid palegreen;
+}
+
+#GCloud {
+  background-color: lightgreen;
+  border: 2px solid lightgreen;
 }
 
 .post-div {
