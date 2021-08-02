@@ -2,7 +2,8 @@ import React from 'react'
 import { config } from "@fortawesome/fontawesome-svg-core"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 config.autoAddCss = false;
@@ -39,7 +40,7 @@ const Footer = () => (
                 <span data-cy="social-links">
                 <a href="mailto:sania.dsouza2012@gmail.com" style={{ paddingLeft: `1rem`, color: `#e3dcdc`}}><FontAwesomeIcon icon= {faEnvelope} className= "fIcon" size="2x" aria-label="Gmail" title="Gmail"/></a>
                 <a href="https://www.linkedin.com/in/saniadsouza/" style={{ paddingLeft: `1.5rem`, color: `#e3dcdc`}}><FontAwesomeIcon icon= {faLinkedin} className= "fIcon" size="2x" aria-label="LinkedIn" title="LinkedIn"/></a>
-                <a href="https://github.com/sania-dsouza" data-cy="projectLink" style={{ paddingLeft: `1.5rem`, color: `#e3dcdc`}}><FontAwesomeIcon icon= {faCodeBranch} className= "fIcon" size="2x" aria-label="Github" title="Github"/></a>
+                <a href="https://github.com/sania-dsouza" data-cy="projectLink" style={{ paddingLeft: `1.5rem`, color: `#e3dcdc`}}><FontAwesomeIcon icon= {faGithub} className= "fIcon" size="2x" aria-label="Github" title="Github"/></a>
                 
                 </span>
             </div>

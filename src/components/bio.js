@@ -1,6 +1,7 @@
 import React from "react"
 import Image from "./homeImage"
 import { Link } from "gatsby"
+import Contact from "./contact"
 
 export default function Bio() {
     return (
@@ -20,6 +21,8 @@ export default function Bio() {
                 <Link to="/blog">
                     <button className="bioButton" id="blogButton"> Blog </button>
                 </Link>
+                
+                <Contact />
                 
                 {/* <Link to="/">
                     <button className="bioButton" id="resumeButton"> Resume </button>

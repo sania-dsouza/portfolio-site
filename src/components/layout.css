@@ -910,11 +910,11 @@ pre tt:after {
   }
 
   .quicklookBlockProject .projectImage {
-    height: 60%;
+    height: auto;
   }
 
   .quicklookBlockProjectPage  .projectImage {
-    height: 60%;
+    height: auto;
   }
 
   .quicklookBlockProjectPage .qlProjectText .projectTitle {
@@ -1054,11 +1054,26 @@ pre tt:after {
 
     .quicklookBlockProject, .quicklookBlockBlog {
       width: 90%;    
-      margin: 1rem;
+      margin: 0.75rem;
+    }
+
+    .quicklookBlockProjectPage {
+      width: 88%;
+      margin: 0.75rem;
     }
 
     .quicklookBlockProject .projectImage {
       height: 47%;
+    }
+
+    .quicklookBlockProject .qlProjectText {
+      margin-top: 1rem;
+      height: auto;
+    }
+
+    .quicklookBlockProjectPage .qlProjectText {
+      margin-top: 1rem;
+      height: auto;
     }
 
     .quicklookBlockProjectPage .projectImage {
