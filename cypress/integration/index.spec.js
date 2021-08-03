@@ -15,8 +15,13 @@ describe('Home page test', () => {
         cy.get('span[data-cy="social-links"]').find('a').should('have.length', 3);
     })
 
-    it('Check the presence of three location info dialogs', () => {
-        cy.get('div[data-cy="info-dialog"]').should('have.length', 3);
+    it('Check the contact section on hero area', () => {
+        cy.get('span[data-cy="social-links-hero"]').find('a').should('have.length', 3);
+    })
+
+    it('Check for quick look blogs and projects', () => {
+        cy.get('div.quicklookBlockBlog').its('length').should('gte', 2);
+        cy.get('div.quicklookBlockProject').its('length').should('gte', 2);
     })
 
 })

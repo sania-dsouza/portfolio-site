@@ -16,7 +16,7 @@ export default function BlogBlock({article}) {
 
                 <div className="blogText">
                     <Link to={`/blog/${article.slug}`}>
-                        <div className="blogTitle" data-cy="project-title" style= {{ fontWeight: `bold`, color: `#6f37a3`}}> {article.title} </div>
+                        <div className="blogTitle" data-cy="blog-title" style= {{ fontWeight: `bold`, color: `#6f37a3`}}> {article.title} </div>
                     </Link>
 
                     <div>
