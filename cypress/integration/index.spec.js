@@ -16,7 +16,7 @@ describe('Home page test', () => {
     })
 
     it('Check the contact section on hero area', () => {
-        cy.get('span[data-cy="social-links-hero"]').find('a').should('have.length', 4);
+        cy.get('div[data-cy="social-links-hero"]').find('a').should('have.length', 4);
     })
 
     it('Check for quick look blogs and projects', () => {
