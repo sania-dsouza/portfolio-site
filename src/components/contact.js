@@ -8,13 +8,12 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 export default function Contact() {
     return (
-        <div>
-            <span data-cy="social-links-hero">
-                <br/>
-                <a href="mailto:sania.dsouza2012@gmail.com" style={{ paddingLeft: `1rem`, color: `orange`, margin: `0 1rem 0 0`}}><FontAwesomeIcon icon= {faEnvelopeSquare} className="cIcon" size="2x" aria-label="Gmail" title="Gmail"/></a>
-                <a href="https://www.linkedin.com/in/saniadsouza/" style={{ paddingLeft: `1.5rem`, color: `#0072b1`, margin: `0 1rem 0 0`}}><FontAwesomeIcon icon= {faLinkedin} className="cIcon" size="2x" aria-label="LinkedIn" title="LinkedIn"/></a> 
-                <a href="https://github.com/sania-dsouza" style={{ paddingLeft: `1rem`, color: `black`, margin: `0 1rem 0 0`}}><FontAwesomeIcon icon= {faGithub} className="cIcon" size="2x" aria-label="Github" title="Github"/></a>
-            </span>
+        <div data-cy="social-links-hero">
+            <br/>
+            <div className="social"> <a href="mailto:sania.dsouza2012@gmail.com" style={{ color: `orange`}}><FontAwesomeIcon icon= {faEnvelopeSquare} className="cIcon" size="2x" aria-label="Gmail" title="Gmail"/></a></div>
+            <div className="social"> <a href="https://www.linkedin.com/in/saniadsouza/" style={{ color: `#0072b1`}}><FontAwesomeIcon icon= {faLinkedin} className="cIcon" size="2x" aria-label="LinkedIn" title="LinkedIn"/></a> </div>
+            <div className="social"> <a href="https://github.com/sania-dsouza" style={{ color: `black` }}><FontAwesomeIcon icon= {faGithub} className="cIcon" size="2x" aria-label="Github" title="Github"/></a></div>
+            <div className="resume"> <a href="https://drive.google.com/file/d/1fQuZUfnP_i9tRplF8Vfj3jDBx-3KZfr1/view?usp=sharing" target="_blank"> Resume </a> </div>
         </div>
     )
 }

@@ -1237,3 +1237,39 @@ pre tt:after {
   width: 90%;
   margin: 0 auto;
 }
+
+.social-links-hero {
+  vertical-align: baseline;
+}
+
+.social {
+  display: inline;
+  padding-left: 1rem;
+  margin: 0 1rem 0 0;
+}
+.resume {
+  padding: 0.5rem;
+  margin-left: 1rem;
+  display: inline;
+  background-color: #ffd100;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000000;
+}
+
+/* mobile styles */
+@media screen and (max-width: 740px) {
+  .resume {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+}
+
+
+.resume a {
+  color: white;
+  font-weight: bold;
+}
+
+.resume a:hover {
+  color: #2dc492;
+}
