@@ -15,6 +15,7 @@ class BlogIndex extends React.Component {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Blog</title>
+        <meta name="description" content="Here are articles sprung out of day-dreaming; fragments of coffee-induced structured thought. Say Hi if you want me to write for you!"/>
         <link rel="canonical" href="https://www.sania-dsouza.com/blog" />
       </Helmet>
       <SEO title="Blog" />

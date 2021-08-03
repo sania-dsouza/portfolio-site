@@ -10,7 +10,7 @@ import get from 'lodash/get'
 
 class IndexPage extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    // const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const projects = get(this, 'props.data.allContentfulDataProjectPost.edges')
     
@@ -19,6 +19,8 @@ class IndexPage extends React.Component {
         <Helmet>
           <meta charSet="utf-8" />
           <title>Home</title>
+          <meta name="description" content="Sania is a software developer who started off testing but 
+          nowadays also develops! She also writes to build her non-techy creative muscles." />
           <link rel="canonical" href="https://www.sania-dsouza.com" />
         </Helmet>
         <SEO title="Home" />
