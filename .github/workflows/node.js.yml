@@ -28,7 +28,9 @@ jobs:
 
     - name: Create .env file
       uses: SpicyPizza/create-envfile@v1
-      with: 
+      with:
+        envkey_CONTENTFUL_SPACE_ID: "bmkgysvjnnnr"
+        envkey_CONTENTFUL_ACCESS_TOKEN: "-L6mSWPZK3xw7biNx4j-c9E4wXuUGWNMo2qTInmEk6E"
         envkey_CLOUDINARY_CLOUD_NAME: "sania-dsouza"
         envkey_CLOUDINARY_API_KEY: 168394517986144
         envkey_CLOUDINARY_API_SECRET: "0IfvcdwmD_uuMWGVy-t6oHo0aK0"
