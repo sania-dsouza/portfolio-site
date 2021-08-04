@@ -1118,6 +1118,10 @@ pre tt:after {
       width: 90%;    
       margin: 1rem;
     }
+    .quicklookBlockProject .qlProjectText {
+      margin-top: 10%;
+      /* height: auto; */
+    }
 
     .quicklookBlockProject .projectImage {
       height: 47%;
@@ -1268,7 +1272,6 @@ pre tt:after {
     margin-top: 1rem;
   }
 }
-
 
 .resume a {
   color: white;
