@@ -775,7 +775,7 @@ pre tt:after {
   }
 
   .bioButton {
-    width: 35%;
+    width: 20%;
     border-radius: 10px;
     box-shadow: 0 0 5px #000000;
     border: none;
@@ -783,7 +783,19 @@ pre tt:after {
     font-size: 1rem;
     color: white;
     cursor: pointer;
-    padding: 0.5em;
+    padding: 0.5rem;
+  }
+
+  @media (max-width: 740px) {
+    .bioButton{
+      width: 35%;
+    }
+  }
+
+  @media (min-width: 750px) and (max-width: 1415px) and (orientation: landscape) {
+    .bioButton{
+      width: 40%;
+    }
   }
 
   #projectsButton {
@@ -794,17 +806,9 @@ pre tt:after {
     background-color: #6f37a3;
   }
 
-  #resumeButton {
-    background-color: #fca030;
-  }
-
-  #email {
-    background-color: hotpink;
-  }
-
-  #linkedin { 
-    background-color: indianred;
-  }
+    #resumeButton {
+      background-color: #fca030;
+    }
 
   /* Home -- Mobile styles */
   @media (max-width: 740px)
@@ -1244,9 +1248,10 @@ pre tt:after {
 
 .social {
   display: inline;
-  padding-left: 1rem;
   margin: 0 1rem 0 0;
+  padding-left: 1rem;
 }
+
 .resume {
   padding: 0.5rem;
   margin-left: 1rem;
