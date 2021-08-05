@@ -1,33 +1,109 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/homeImage"
 import { Helmet } from "react-helmet"
 import SEO from "../components/seo"
-import InfoDialog1 from "../components/infoDialog1"
-import InfoDialog2 from "../components/infoDialog2"
-import InfoDialog3 from "../components/infoDialog3"
+import Bio from "../components/bio"
+import QLBlockProject from "../components/quicklookBlockProject"
+import QLBlockBlog from "../components/quicklookBlockBlog"
+import get from 'lodash/get'
 
-const IndexPage = () => (
-  <Layout>
-    <Helmet>
-      <meta charSet="utf-8" />
-      <title>Home</title>
-      <description>Test</description>
-      <link rel="canonical" href="http://localhost:8000" />
-    </Helmet>
-    <SEO title="Home" />
+class IndexPage extends React.Component {
+  render() {
+    // const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
+    const projects = get(this, 'props.data.allContentfulDataProjectPost.edges')
     
-    <div className="home-image" style={{ width: `auto`, overflow: `auto`  }}>
-      <Image/>
+    return(
+      <Layout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Home</title>
+          <meta name="description" content="Sania is a software developer who started off testing but 
+          nowadays also develops! She also writes to build her non-techy creative muscles." />
+          <meta name="keywords" content="data science, projects, writing, blog, posts, Toronto, Canada" data-react-helmet="true"/>
+          <link rel="canonical" href="https://www.sania-dsouza.com" />
+        </Helmet>
+        <SEO title="Home" />
+
+        <Bio></Bio>
+  
+
+    <div className="quicklookDiv" id="qlblock1"> 
+        <p style={{ color: `black`, padding: `0.5rem 1rem 0`, fontWeight: `bold`, fontSize: `28px`}}>Featured projects</p>
+        
+        <div className="qlBlockDiv">
+          {projects.map(({ node }) => {
+            return (
+              <QLBlockProject article={node}/>
+            )
+          })}
+        </div>
+        
+        <Link to="/projects"><div className="seemore"> See more projects &#8594;</div></Link>
     </div>
 
-    <InfoDialog1></InfoDialog1>
-    <InfoDialog2></InfoDialog2>
-    <InfoDialog3></InfoDialog3>
-    {/* <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link> */}
+    <div className="quicklookDiv" id="qlblock2"> 
+      <p style={{ color: `black`, padding: `0.5rem 1rem 0`, fontWeight: `bold`, fontSize: `28px`}}>Recent posts</p>
+        
+      <div className="qlBlockDiv">
+          {posts.map(({ node }) => {
+            return (
+              <QLBlockBlog article={node}/>
+            )
+          })}
+        </div>
+        
+        <Link to="/blog"><div className="seemore"> See more posts &#8594;</div></Link>
+    </div>
   </Layout>
 )
+}
+}
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  query HomeQuery {
+
+    #query for blog postss
+    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }, limit: 3) {
+      edges {
+        node {
+          title
+          slug
+          publishDate(formatString: "MMMM Do, YYYY")
+          tags
+          heroImage {
+            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
+              ...GatsbyContentfulFluid
+            }
+          }
+          subtitle
+          timeToRead
+        }
+      }
+    }
+    
+    # Query for projects 
+    allContentfulDataProjectPost(sort: { fields: [publishDate], order: DESC }, limit: 3) {
+      edges {
+        node {
+          title
+          slug
+          publishDate(formatString: "MMMM Do, YYYY")
+          tags
+          heroImage {
+            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
+              ...GatsbyContentfulFluid
+            }
+          }
+          subtitle{
+            subtitle
+          }
+          timeToRead
+        }
+      }
+    }
+  }
+`

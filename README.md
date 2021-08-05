@@ -34,11 +34,16 @@
 ## Tools used ##
 
 **Gatsby**: Front-end framework\
-**Github**: Project repositories\
+**Github**: Project repositories markdown files\
 **Cloudinary**: Images for Gallery\
-**Medium**: Articles\
+**Medium**: Articles on markdown\
 **Cypress** : E2E integration tests\
 **Github Actions**: CI\
-**Github Pages**: Deploy
+**Netlify**: Deploy
 
-
+## Deploy on GH Pages ##
+   ```
+   git checkout gh-pages
+   git rebase master
+   npm run deploy
+   ```

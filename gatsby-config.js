@@ -2,6 +2,28 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
+const { MARKS, INLINES, BLOCKS } = require('@contentful/rich-text-types')
+
+const contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  accessToken:
+    process.env.CONTENTFUL_ACCESS_TOKEN ||
+    process.env.CONTENTFUL_DELIVERY_TOKEN,
+};
+
+if (process.env.CONTENTFUL_HOST) {
+  contentfulConfig.host = process.env.CONTENTFUL_HOST;
+  contentfulConfig.accessToken = process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN;
+}
+
+const { spaceId, accessToken } = contentfulConfig;
+
+if (!spaceId || !accessToken) {
+  throw new Error(
+    "Contentful spaceId and the access token need to be provided."
+  );
+}
+
 const { githubApiQuery } = require('./github-api')   // import the API query created 
 
 module.exports = {
@@ -9,12 +31,16 @@ module.exports = {
 
   siteMetadata: {
     title: `Sania D Souza`,
-    description: `My home on the world wide web!`,
+    description: `Software developer/writer based out of Toronto.`,
     author: `Sania`,
-    siteUrl: "https://www.sania-dsouza.com"
+    url:  `https://www.sania-dsouza.com`,
+    siteUrl: "https://www.sania-dsouza.com",
+    image: "/images/favicon.png",
+    keywords: `Sania D Souza, software developer, test developer, writer, writing, creative, freelance`
   },
   
   plugins: [
+    
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
@@ -24,6 +50,21 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/blog/`,
+        },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/project/`,
+        },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -32,8 +73,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#2dc492`,
+        theme_color: `#2dc492`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
@@ -44,40 +85,12 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       }
     },
-      {
-        resolve: `gatsby-source-github-api`,
-        options: {
-          url: "https://api.github.com/graphql", // default Github GraphQL v4 API endpoint
-
-          // token: required by the GitHub API
-          token: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
-
-          // GraphQLquery: defaults to a search query
-          graphQLQuery: githubApiQuery,
-
-          // variables: defaults to variables needed for a search query
-          variables: {
-            github_login: process.env.GITHUB_LOGIN
-          }
-        }
-      },
-      {
-        resolve: 'gatsby-source-medium',
-        options: {
-          username: '@sania.dsouza2012', // Medium user name
-        },
-      },
-      {
-        resolve: `gatsby-source-cloudinary`,
-        options: {
-          cloudName: process.env.CLOUDINARY_CLOUD_NAME,
-          apiKey: process.env.CLOUDINARY_API_KEY,
-          apiSecret: process.env.CLOUDINARY_API_SECRET,
-          resourceType: `image`,
-          prefix: `personal-site/`,
-          maxResults: 50
-        }
-      },
+      // {
+      //   resolve: 'gatsby-source-medium',
+      //   options: {
+      //     username: '@sania.dsouza2012', // Medium user name
+      //   },
+      // },
       {
         resolve: `gatsby-plugin-nprogress`,
         options: {
@@ -87,10 +100,38 @@ module.exports = {
           showSpinner: true,
         },
       },
-
+      {
+        resolve: `gatsby-source-contentful`,
+        options: contentfulConfig,
+      },
+      
+      {   
+        resolve: `@contentful/gatsby-transformer-contentful-richtext`,
+        options: {
+          renderOptions: {
+            /*
+            * Defines custom html string for each node type like heading, embedded entries etc..
+            */
+            renderNode: {
+              // Example
+              [BLOCKS.EMBEDDED_ASSET]: node => {
+                let { description, file } = node.data.target.fields
+                //console.log(file["en-US"].url.substring(2,))
+                //console.log(node.data.target.fields)
+                let imageUrl = "https://"+file["en-US"].url.substring(2,);
+                return `<img src=${imageUrl} alt=${description['en-US']} />`
+              },
+              [INLINES.EMBEDDED_ENTRY]: node => {
+                //console.log(node.data.target.fields)
+                return `<a href=${node.data.target.fields.slug['en-US']} class='custom-entry'> ${node.data.target.fields.title['en-US']} </a>`
+              },
+            }
+          }
+        }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 
 }

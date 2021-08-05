@@ -1,13 +1,12 @@
 
 import React from "react"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome } from "@fortawesome/free-solid-svg-icons"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Link } from "gatsby"
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
+    <SEO title="404" />
 
     <div className="page-404-block" style={{
       marginTop: `7%`,
@@ -32,10 +31,21 @@ const NotFoundPage = () => (
         borderRadius: `20px`
       }}>
         <span style={{ fontWeight: `bold` }}> Oh...oh!  </span>
-        <p></p>
+        <br/>
         This is not where you want to be. 
-        <p></p>
-        <a href="/" style={{ color: `#357068` }}><FontAwesomeIcon icon={faHome} className="icon" size="2x" title="Home"/></a>
+        <br/>
+        Go to:
+        <Link href="/" style={{ color: `#357068` }}>
+          <div style={{ padding: `0.5rem`, textDecoration: `underline`, fontWeight: `bold`}}>Home</div>
+        </Link>
+
+        <Link href="/projects" style={{ color: `#357068` }}>
+          <div style={{ padding: `0.5rem`, textDecoration: `underline`, fontWeight: `bold`}}>Projects</div>
+        </Link>
+
+        <Link href="/blog" style={{ color: `#357068` }}>
+          <div style={{ padding: `0.5rem`, textDecoration: `underline`, fontWeight: `bold`}}>Blog</div>
+        </Link>
       </div>
       
     </div>
