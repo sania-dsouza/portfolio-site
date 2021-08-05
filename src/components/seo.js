@@ -20,7 +20,7 @@ function SEO({ description, lang, meta, title }) {
     `
   )
 
-  const keywords = keywords || site.siteMetadata.keywords
+  const metaKeywords = keywords || site.siteMetadata.keywords
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
   // const image = image || site.siteMetadata.image
@@ -44,7 +44,7 @@ function SEO({ description, lang, meta, title }) {
         // },
         {
           name: `keywords`,
-          content: keywords,
+          content: metaKeywords,
         },
         {
           property: `og:title`,
