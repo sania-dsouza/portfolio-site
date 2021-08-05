@@ -11,6 +11,7 @@ function SEO({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
+            keywords
             siteUrl: url
             # image
           }
@@ -19,6 +20,7 @@ function SEO({ description, lang, meta, title }) {
     `
   )
 
+  const keywords = keywords || site.siteMetadata.keywords
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
   // const image = image || site.siteMetadata.image
@@ -40,6 +42,10 @@ function SEO({ description, lang, meta, title }) {
         //   name:   `image`,
         //   content: image,
         // },
+        {
+          name: `keywords`,
+          content: keywords,
+        },
         {
           property: `og:title`,
           content: title,

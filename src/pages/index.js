@@ -21,6 +21,7 @@ class IndexPage extends React.Component {
           <title>Home</title>
           <meta name="description" content="Sania is a software developer who started off testing but 
           nowadays also develops! She also writes to build her non-techy creative muscles." />
+          <meta name="keywords" content="data science, projects, writing, blog, posts, Toronto, Canada" data-react-helmet="true"/>
           <link rel="canonical" href="https://www.sania-dsouza.com" />
         </Helmet>
         <SEO title="Home" />

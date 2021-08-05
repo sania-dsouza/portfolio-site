@@ -36,6 +36,7 @@ module.exports = {
     url:  `https://www.sania-dsouza.com`,
     siteUrl: "https://www.sania-dsouza.com",
     image: "/images/favicon.png",
+    keywords: `Sania D Souza, software developer, test developer, writer, writing, creative, freelance`
   },
   
   plugins: [

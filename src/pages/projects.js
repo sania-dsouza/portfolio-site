@@ -17,13 +17,10 @@ class ProjectIndex extends React.Component {
           <meta charSet="utf-8" />
           <title>Projects</title>
           <meta name="description" content="Software development and data science projects" />
+          <meta name="keywords" content="data science, projects, coding, react, javascript, test, python" data-react-helmet="true"/>
           <link rel="canonical" href="https://www.sania-dsouza.com/projects" />
         </Helmet>
         <SEO title="Projects" />
-        
-        {/* <div style= {{ textAlign: `center`, marginTop: `1rem`, padding: `auto`, color: `white`, fontFamily: 'Vollkorn', fontWeight: `bold`, fontSize: `32px`}}>
-          <div>Projects</div>
-        </div> */}
         
         <div className= "projBlockWrapper">
           {/* <h2 className="section-headline">All projects</h2> */}
